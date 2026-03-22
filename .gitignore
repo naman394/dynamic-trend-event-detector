@@ -3,17 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .vscode/
-data/news_headlines.csv
-data/20260322044500.gkg.csv
-reports/*.png
-reports/*.html
-reports/*.csv
-reports/*.tex
-reports/*.aux
-reports/*.log
-reports/*.pdf
-reports/*.out
-reports/*.toc
-!reports/report.tex
-!reports/implementation_report.md
-!data/gdelt_processed.csv
+
+# Allow all project outputs and data for complete submission
+# (Only keeping env and ide junk hidden)
