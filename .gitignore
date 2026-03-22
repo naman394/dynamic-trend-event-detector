@@ -4,5 +4,6 @@ __pycache__/
 .DS_Store
 .vscode/
 
-# Allow all project outputs and data for complete submission
-# (Only keeping env and ide junk hidden)
+# Keep data and reports in the repo as requested by user
+!data/*.csv
+!reports/**/*
