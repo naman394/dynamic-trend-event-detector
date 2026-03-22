@@ -1,0 +1,7 @@
+MODEL INTEGRITY REPORT - ADVANCED ML (LDA)
+========================================
+1. Model Fit (Perplexity): 5248.49
+2. Log-Likelihood: -797586.14
+3. Topic Coherence (Cv): 0.3739
+4. Average Topic Confidence: 0.5080
+========================================
