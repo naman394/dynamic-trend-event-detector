@@ -3,14 +3,24 @@ MODEL INTEGRITY REPORT — DEEP LEARNING (SBERT + K-Means)
 Model              : SBERT (all-MiniLM-L6-v2)
 Embedding dim      : 384
 UMAP               : 3D + 2D
-Clustering         : K-Means K=3
+Clustering         : K-Means K=13
 Documents          : 49,989
-Silhouette Score   : 0.0213
-Calinski-Harabasz  : 917.21
+Silhouette Score   : 0.0226
+Calinski-Harabasz  : 454.89
 Max Sem Velocity   : 0.6563 (Week 2006-09-11/2006-09-17)
 ============================================================
 
 Clusters:
-  Topic A (20,454 docs): new, council, govt, says, nsw, water, coronavirus, plan
-  Topic B (15,768 docs): interview, win, australia, new, cup, australian, day, world
-  Topic C (13,767 docs): police, man, court, crash, charged, murder, death, killed
+  Topic A (2,403 docs): water, rain, drought, flood, weather, cyclone, storm, floods
+  Topic B (4,718 docs): new, farmers, cattle, rural, indigenous, wa, farm, search
+  Topic C (4,488 docs): council, election, govt, government, mp, says, minister, labor
+  Topic D (1,399 docs): coronavirus, covid, vaccine, cases, flu, outbreak, quarantine, victoria
+  Topic E (3,879 docs): iraq, china, trump, says, korea, iran, war, attack
+  Topic F (1,354 docs): bushfire, blaze, fires, house, firefighters, bushfires, arson, destroys
+  Topic G (3,072 docs): crash, death, dies, killed, dead, man, car, police
+  Topic H (4,991 docs): market, price, industry, business, budget, pay, new, deal
+  Topic I (4,660 docs): australia, australian, sydney, nsw, melbourne, queensland, adelaide, canberra
+  Topic J (4,911 docs): interview, speaks, abc, news, drum, new, talks, country
+  Topic K (3,450 docs): health, hospital, school, care, new, doctors, cancer, funding
+  Topic L (5,248 docs): win, cup, wins, world, final, england, league, open
+  Topic M (5,416 docs): police, man, court, charged, murder, charges, accused, guilty
