@@ -25,7 +25,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # ── 1. Load & Pre-process Data ───────────────────────────────────────────────
-df = pd.read_csv('data/news_headlines.csv')
+df = pd.read_csv('data/abcnews-date-text 2.csv')
 df['publish_date'] = pd.to_datetime(df['publish_date'], format='%Y%m%d')
 
 # Clean: lowercase, remove punctuation/digits, strip extra whitespace
@@ -46,10 +46,10 @@ print(f"Dataset: {len(df):,} headlines  |  date range: "
 # with repeated terms doesn't dominate the whole corpus.
 vectorizer = TfidfVectorizer(
     stop_words='english',
-    max_features=1000,
+    max_features=5000,
     sublinear_tf=True,      # log-scale term frequency
     ngram_range=(1, 2),     # capture single words AND 2-word phrases
-    min_df=5,               # ignore terms appearing in fewer than 5 docs
+    min_df=50,              # ignore terms appearing in fewer than 50 docs (0.004% of 1.24M)
 )
 tfidf_matrix = vectorizer.fit_transform(df['clean_text'])
 feature_names = vectorizer.get_feature_names_out()

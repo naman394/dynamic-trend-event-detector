@@ -8,6 +8,9 @@ __pycache__/
 # Large raw dataset (61 MB) — working file is data/news_headlines.csv
 data/abcnews-date-text 2.csv
 
+# GDELT downloaded ZIP cache (auto-rebuilt by gdelt_fetcher.py)
+data/gdelt_cache/
+
 # Keep data and reports in the repo
 !data/*.csv
 !reports/**/*

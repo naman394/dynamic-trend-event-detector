@@ -4,7 +4,7 @@ import seaborn as sns
 import os
 
 # Load dataset
-data_path = 'data/news_headlines.csv'
+data_path = 'data/abcnews-date-text 2.csv'
 df = pd.read_csv(data_path)
 
 # Convert publish_date to datetime

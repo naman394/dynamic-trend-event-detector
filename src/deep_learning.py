@@ -37,17 +37,22 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ── 1. Load & Pre-process Data ───────────────────────────────────────────────
 print("Loading data …")
-df = pd.read_csv('data/news_headlines.csv')
+df = pd.read_csv('data/abcnews-date-text 2.csv')
 df['publish_date'] = pd.to_datetime(df['publish_date'], format='%Y%m%d')
 df['headline_text'] = df['headline_text'].astype(str)
 
-# Sample if corpus is large to keep embedding time manageable
-SAMPLE_SIZE = 5000
-if len(df) > SAMPLE_SIZE:
-    df = df.sample(SAMPLE_SIZE, random_state=42).reset_index(drop=True)
-    print(f"Sampled {SAMPLE_SIZE} headlines for SBERT encoding")
-else:
-    print(f"Using all {len(df)} headlines")
+# Stratified sample by year so all 19 years (2003-2021) are equally represented.
+# 50,000 total → ~2,631 per year — balances SBERT encoding time vs. coverage.
+SAMPLE_SIZE = 50_000
+df['_yr'] = df['publish_date'].dt.year
+n_years  = df['_yr'].nunique()
+per_year = SAMPLE_SIZE // n_years
+df = pd.concat(
+    [grp.sample(min(len(grp), per_year), random_state=42)
+     for _, grp in df.groupby('_yr')]
+).drop(columns='_yr').reset_index(drop=True)
+print(f"Stratified sample: {len(df):,} headlines across {n_years} years "
+      f"(≈{per_year:,}/year) for SBERT encoding")
 
 
 # ── 2. SBERT Embeddings ──────────────────────────────────────────────────────
@@ -67,11 +72,11 @@ print(f"Embedding matrix: {embeddings.shape}")
 
 # ── 3. UMAP Dimensionality Reduction ────────────────────────────────────────
 print("\nRunning UMAP (3 components) for visualisation …")
-reducer_3d = umap.UMAP(n_components=3, n_neighbors=15, min_dist=0.1,
+reducer_3d = umap.UMAP(n_components=3, n_neighbors=30, min_dist=0.1,
                         metric='cosine', random_state=42)
 umap_3d = reducer_3d.fit_transform(embeddings)     # shape (N, 3)
 
-reducer_2d = umap.UMAP(n_components=2, n_neighbors=15, min_dist=0.1,
+reducer_2d = umap.UMAP(n_components=2, n_neighbors=30, min_dist=0.1,
                         metric='cosine', random_state=42)
 umap_2d = reducer_2d.fit_transform(embeddings)     # shape (N, 2)
 
@@ -92,7 +97,7 @@ for k in K_RANGE:
     km = KMeans(n_clusters=k, random_state=42, n_init=10)
     labels = km.fit_predict(embeddings)
     inertias.append(km.inertia_)
-    sil = silhouette_score(embeddings, labels, sample_size=2000, random_state=42)
+    sil = silhouette_score(embeddings, labels, sample_size=5000, random_state=42)
     silhouettes.append(sil)
     print(f"  K={k:2d}  Inertia={km.inertia_:,.0f}  Silhouette={sil:.4f}")
 
@@ -128,7 +133,7 @@ cluster_labels = kmeans.fit_predict(embeddings)
 df['cluster'] = cluster_labels
 
 sil_final = silhouette_score(embeddings, cluster_labels,
-                             sample_size=min(2000, len(df)), random_state=42)
+                             sample_size=min(5000, len(df)), random_state=42)
 ch_score  = calinski_harabasz_score(embeddings, cluster_labels)
 print(f"Silhouette Score       : {sil_final:.4f}  (higher = better, max 1.0)")
 print(f"Calinski-Harabasz Score: {ch_score:.2f}    (higher = better)")

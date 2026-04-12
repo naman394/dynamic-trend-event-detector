@@ -91,7 +91,7 @@ def clean_text(text: str) -> str:
 
 
 # ── 1. Load & pre-process ────────────────────────────────────────────────────
-df = pd.read_csv('data/news_headlines.csv')
+df = pd.read_csv('data/abcnews-date-text 2.csv')
 df['headline_text'] = df['headline_text'].astype(str)
 df['clean_text']    = df['headline_text'].apply(clean_text)
 print(f"Loaded {len(df):,} headlines")
@@ -102,9 +102,9 @@ texts_tokenised = [doc.split() for doc in df['clean_text']]
 
 # ── 2. Vectorise (raw counts for LDA) ───────────────────────────────────────
 tf_vectorizer = CountVectorizer(
-    max_df=0.90, min_df=5,
+    max_df=0.90, min_df=50,   # 50 docs ≈ 0.004% of 1.24M corpus
     stop_words='english',
-    max_features=5000,
+    max_features=15000,
 )
 tf_matrix = tf_vectorizer.fit_transform(df['clean_text'])
 vocab     = tf_vectorizer.get_feature_names_out().tolist()
@@ -112,12 +112,13 @@ print(f"Vocabulary: {len(vocab):,} terms  |  Matrix: {tf_matrix.shape}")
 
 
 # ── 3. Train LDA ─────────────────────────────────────────────────────────────
-NUM_TOPICS = 5
+NUM_TOPICS = 10   # 19 years (2003-2021) warrants more latent topics
 lda = LatentDirichletAllocation(
     n_components=NUM_TOPICS,
-    max_iter=25,
+    max_iter=20,
     learning_method='online',
     learning_offset=50.0,
+    batch_size=4096,           # larger batches speed up online LDA on 1.24M docs
     random_state=42,
 )
 lda.fit(tf_matrix)
