@@ -1,9 +1,9 @@
 MODEL INTEGRITY REPORT — ADVANCED ML (LDA)
 =======================================================
-Vocabulary       : 3,732
-Topics           : 5
-Perplexity       : 3059.95
-Log-Likelihood   : -645944.88
-Gensim C_V       : 0.3316  [0→1, higher=better]
-Gensim UMass     : -12.5770  [−inf→0, higher=better]
-Avg Max-Topic Pr : 0.4990
+Vocabulary       : 11,956
+Topics           : 10
+Perplexity       : 5868.89
+Log-Likelihood   : -50235963.57
+Gensim C_V       : 0.3575  [0→1, higher=better]
+Gensim UMass     : -5.5170  [−inf→0, higher=better]
+Avg Max-Topic Pr : 0.4173

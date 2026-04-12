@@ -3,16 +3,14 @@ MODEL INTEGRITY REPORT — DEEP LEARNING (SBERT + K-Means)
 Model              : SBERT (all-MiniLM-L6-v2)
 Embedding dim      : 384
 UMAP               : 3D + 2D
-Clustering         : K-Means K=5
-Documents          : 5,000
-Silhouette Score   : 0.0303
-Calinski-Harabasz  : 97.02
-Max Sem Velocity   : 0.1308 (Week 2003-05-26/2003-06-01)
+Clustering         : K-Means K=3
+Documents          : 49,989
+Silhouette Score   : 0.0213
+Calinski-Harabasz  : 917.21
+Max Sem Velocity   : 0.6563 (Week 2006-09-11/2006-09-17)
 ============================================================
 
 Clusters:
-  Topic A (650 docs): police, man, court, murder, death, charged, face, trial
-  Topic B (1,294 docs): cup, win, wins, world, takes, title, world cup, final
-  Topic C (1,525 docs): council, govt, plan, new, nsw, water, group, drought
-  Topic D (594 docs): iraq, war, iraqi, baghdad, troops, says, saddam, korea
-  Topic E (937 docs): sars, crash, dead, killed, dies, death, hospital, missing
+  Topic A (20,454 docs): new, council, govt, says, nsw, water, coronavirus, plan
+  Topic B (15,768 docs): interview, win, australia, new, cup, australian, day, world
+  Topic C (13,767 docs): police, man, court, crash, charged, murder, death, killed

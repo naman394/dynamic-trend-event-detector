@@ -303,32 +303,46 @@ python run_all.py
 
 ## 9. Results Summary
 
+Trained on **1,244,184 headlines** spanning 2003–2021 (full ABC News archive).
+
 | Model | Key Metric | Value |
 |---|---|---|
-| TF-IDF | Vocabulary size | 1000 n-grams |
-| TF-IDF | Top global term | see `reports/baseline/global_term_ranking.csv` |
-| LDA | Perplexity | 3059.95 (lower = better fit) |
-| LDA | Log-Likelihood | −645,944.88 |
-| LDA | **Gensim C_V coherence** | **0.3316** [0→1, higher=better] |
-| LDA | Gensim UMass coherence | −12.58 (−∞→0, higher=better) |
-| LDA | Avg max topic prob | 0.4990 |
-| **SBERT K-Means** | **Optimal K** | **5 clusters** |
-| **SBERT K-Means** | **Silhouette Score** | **0.0303** |
-| **SBERT K-Means** | **Calinski-Harabasz** | **97.02** |
-| **SBERT K-Means** | **Max Semantic Velocity** | **0.1308** (Week 2003-05-26) |
+| TF-IDF | Vocabulary (bigrams) | 5,000 n-grams, min_df=50 |
+| TF-IDF | Top global term | `police` (score 11,374) |
+| LDA | Topics | **10** (19 years of data) |
+| LDA | Vocabulary | 11,956 terms |
+| LDA | Perplexity | 5,868.89 |
+| LDA | Log-Likelihood | −50,235,963.57 |
+| LDA | **Gensim C_V coherence** | **0.3575** [0→1, higher=better] |
+| LDA | Gensim UMass coherence | −5.52 (−∞→0, higher=better) |
+| LDA | Avg max topic prob | 0.4173 |
+| **SBERT K-Means** | Training set | 49,989 (stratified 2,631/year) |
+| **SBERT K-Means** | **Optimal K** | **3 clusters** |
+| **SBERT K-Means** | **Silhouette Score** | **0.0213** |
+| **SBERT K-Means** | **Calinski-Harabasz** | **917.21** |
+| **SBERT K-Means** | **Max Semantic Velocity** | **0.6563** (Week 2006-09-11) |
 | GDELT | Records processed | 564 |
 | Impact Scoring (nb 06 baseline) | Method | TF-IDF cosine × \|tone\| |
-|| Impact Scoring (nb 09 SBERT) | **SBERT cosine × \|tone\|** — rupture-triggered |
+| Impact Scoring (nb 09 SBERT) | Method | **SBERT cosine × \|tone\|** — rupture-triggered |
 
-### Discovered Topic Clusters (SBERT K-Means)
+### Discovered Topic Clusters (SBERT K-Means, K=3)
 
 | Cluster | Size | Theme | Top Terms |
 |---|---|---|---|
-| Topic A | 650 | Crime / Courts | police, murder, court, charged, trial |
-| Topic B | 1,294 | Sports | cup, win, world, title, final |
-| Topic C | 1,525 | Government / Policy | council, govt, plan, drought, water |
-| Topic D | 594 | War / Security | iraq, war, baghdad, troops, saddam |
-| Topic E | 937 | Health / Disasters | sars, crash, dead, hospital, missing |
+| Topic A | 20,454 | Government / Society | new, council, govt, says, nsw, water, coronavirus, plan |
+| Topic B | 15,768 | Sports / Culture | interview, win, australia, cup, australian, day, world |
+| Topic C | 13,767 | Crime / Justice | police, man, court, crash, charged, murder, death, killed |
+
+> With 19 years of diverse news (2003–2021), SBERT semantics converge on 3 broad megatopics.
+> K=3 was the Silhouette optimum — `interview` in Topic B reflects ABC's *"interview"*-titled  
+> broadcast clips, which are a structural feature of the dataset.
+
+### Narrative Rupture Discovery
+
+Max semantic velocity **V_s = 0.6563** at **Week 2006-09-11/2006-09-17** — aligns with:
+- Howard Government's **media ownership law** changes introduced to Parliament (Sept 2006)
+- North Korea nuclear test preparations (international shift)
+- Major domestic sporting + judicial stories cross-cutting that week
 
 All generated charts, CSVs, and reports are in `reports/`.
 
@@ -340,10 +354,10 @@ All generated charts, CSVs, and reports are in `reports/`.
 
 | Module | Technology |
 |---|---|
-| TF-IDF Baseline | sklearn `TfidfVectorizer`, bigrams, sublinear TF |
-| LDA Advanced ML | sklearn LDA + **Gensim C_V coherence** (0.3316) |
-| Deep Learning | SBERT `all-MiniLM-L6-v2` + UMAP + K-Means (K=5) |
-| Semantic Velocity | Weekly centroid shift (max rupture V_s=0.1308) |
+| TF-IDF Baseline | sklearn `TfidfVectorizer`, bigrams, sublinear TF — 1.24M headlines |
+| LDA Advanced ML | sklearn LDA + **Gensim C_V coherence** (0.3575) — 10 topics, 1.24M docs |
+| Deep Learning | SBERT `all-MiniLM-L6-v2` + UMAP + K-Means (K=3) — 50K stratified |
+| Semantic Velocity | Weekly centroid shift (max rupture V_s=0.6563, Week 2006-09-11) |
 | Growth Velocity | Monthly cluster size tracking |
 | GDELT Processing | GKG theme + tone parsing |
 | GDELT Verification | Rupture-triggered cross-reference with ABC News |
