@@ -2,12 +2,14 @@
 Master orchestrator — full pipeline execution order:
 
   EDA → Baseline TF-IDF → Advanced ML LDA → Deep Learning SBERT K-Means
-        → GDELT Processor → GDELT Analysis
-              → Event Impact Scoring (SBERT, uses DL rupture weeks)
-                    → Visualise Results
+        → GDELT Processor (live fetch → latest 15-min snapshot)
+              → GDELT Analysis
+                    → Event Impact Scoring (SBERT, uses DL rupture weeks)
+                          → Visualise Results
 
-Note: GDELT runs after Deep Learning so that event_impact_scoring.py can
-      reference the semantic velocity / rupture output from the DL model.
+GDELT live feed: gdelt_processor.py calls gdelt_fetcher.py which downloads the
+most recent GKG snapshot from http://data.gdeltproject.org/gdeltv2/lastupdate.txt
+(updated every 15 minutes). Pass --local to skip the network and use local files.
 """
 import os
 import subprocess
@@ -47,5 +49,6 @@ if __name__ == "__main__":
             print(f"[SKIP] {script} not found")
 
     print("\n" + "=" * 60)
-    print("  Phase-1 pipeline complete. Outputs in reports/")
+    print("  Pipeline complete. Outputs in reports/")
+    print("  GDELT data fetched live from the GDELT 2.0 API.")
     print("=" * 60)
