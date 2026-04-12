@@ -1,9 +1,13 @@
 venv/
+venv311/
 __pycache__/
 *.pyc
 .DS_Store
 .vscode/
 
-# Keep data and reports in the repo as requested by user
+# Large raw dataset (61 MB) — working file is data/news_headlines.csv
+data/abcnews-date-text 2.csv
+
+# Keep data and reports in the repo
 !data/*.csv
 !reports/**/*

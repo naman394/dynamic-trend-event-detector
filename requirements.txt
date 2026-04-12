@@ -1,11 +1,20 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-nltk
-gensim
-bertopic
-sentence-transformers
-umap-learn
-hdbscan
+# Core data science stack
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.2
+matplotlib>=3.7
+seaborn>=0.12
+jupyter>=1.0
+nbconvert>=7.0
+ipykernel>=6.0
+
+# Deep Learning — SBERT + UMAP K-Means (implemented)
+sentence-transformers>=2.2    # SBERT contextual embeddings
+umap-learn>=0.5               # UMAP dimensionality reduction
+
+# Topic coherence — requires Python ≤ 3.12 (use venv311 on this project)
+gensim>=4.3
+
+# Future upgrades (not yet installed)
+# bertopic>=0.15               # BERTopic / HDBSCAN upgrade from K-Means
+# hdbscan>=0.8
