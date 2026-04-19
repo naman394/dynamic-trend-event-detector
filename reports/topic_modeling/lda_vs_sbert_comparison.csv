@@ -1,0 +1,5 @@
+metric,value,notes
+LDA K=10 C_V (Gensim),0.3274,"passes=10, train_time_s=26.1"
+LDA best K sweep (K=25),0.4148,"sweep K in [5, 10, 15, 20, 25]"
+"SBERT clusters C_V (TF-IDF words, same texts/dict)",0.3675,"encode_s=32.6, umap_hdbscan_s=4.6"
+SBERT clusters (excl. -1 noise),638,HDBSCAN min_cluster_size=20

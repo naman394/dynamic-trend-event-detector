@@ -1,0 +1,8 @@
+keyword_theme,lda_topic_id,lda_top_words,bertopic_topic_id,bertopic_top_words
+bushfire,2,"after, victoria, health, south, two, people, year, melbourne, into, more, fire, years",1,"bushfire, fire, bushfires, fires, firefighters, burning, emergency, burn, rfs, homes"
+fire,2,"after, victoria, health, south, two, people, year, melbourne, into, more, fire, years",1,"bushfire, fire, bushfires, fires, firefighters, burning, emergency, burn, rfs, homes"
+covid,7,"covid, new, coronavirus, australia, says, queensland, australian, china, day, australias, border, quarantine",0,"cases, records, coronavirus, restrictions, victoria, covid, new, latest, border, nsw"
+coronavirus,7,"covid, new, coronavirus, australia, says, queensland, australian, china, day, australias, border, quarantine",0,"cases, records, coronavirus, restrictions, victoria, covid, new, latest, border, nsw"
+climate,6,"nsw, lockdown, under, open, victorian, residents, trial, amid, local, change, climate, andrews",78,"climate, change, scientists, action, science, geoengineering, warming, molan, crowe, statement"
+police,9,"police, has, off, found, its, numbers, been, regional, but, india, murder, being",58,"cctv, footage, shows, video, release, camera, vision, bodycam, police, captures"
+election,3,"government, minister, scott, news, morrison, election, state, federal, announces, community, tasmania, act",17,"election, federal, voting, campaign, voters, polls, seats, clive, palmer, vote"

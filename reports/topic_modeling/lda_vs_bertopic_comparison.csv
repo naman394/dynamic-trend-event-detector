@@ -1,0 +1,5 @@
+metric,value,notes
+LDA K=10 C_V (Gensim),0.3274,"passes=10, train_time_s=31.6"
+LDA best K sweep (K=25),0.4437,"sweep K in [5, 10, 15, 20, 25]"
+"BERTopic C_V (topic words, same texts/dict)",0.4824,train_time_s=169.1
+BERTopic topics (excl. -1),480,nr_topics=auto
