@@ -1,0 +1,120 @@
+anchor_id,anchor_label,gdelt_theme_expected,source,date,topic_id,keywords,probe_hits,velocity,velocity_z
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,181,"grants, sports, mckenzie, bridget, morrison",0,0.0064655172413793,5.04785308991021
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,225,"iran, soleimani, qassem, killing, trump",0,0.0042372881355932,4.964454574187481
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,228,"sports, grants, government, sport, rorts",0,0.0047413793103448,4.7815988805153316
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,245,"kobe, bryant, lakers, nba, los",0,0.0068965517241379,4.765916136383622
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,387,"yuendumu, police, rolfe, zachary, shooting",0,0.0043859649122807,4.717005001546991
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,99,"volcano, island, white, new, zealand",0,0.022457627118644,4.518831923616404
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,583,"china, coronavirus, covid, wuhan, australia",0,0.0137960232415545,4.513462759096286
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,452,"ceo, bank, austrac, money, laundering",0,0.0066960683603052,4.352478360949419
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,216,"baghdadi, islamic, state, abu, bakr",0,0.0065954912427758,4.21298182880251
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,345,"ibac, casey, hears, councillor, developer",0,0.0040124832813196,4.004258466079107
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,139,"bushfire, bushfires, nsw, fires, emergency",4,0.0846710805084745,3.969225118376671
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,270,"peter, gutwein, premier, tasmanian, tasmania",0,0.0030172413793103,3.923276077029441
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,93,"measles, outbreak, samoa, vaccination, cases",0,0.0049193783199358,3.905414828224973
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,321,"paul, corruption, whyte, ccc, guilty",0,0.0026749888542131,3.8786117418168273
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,28,"thursday, tuesday, monday, wednesday, friday",0,0.0060439720867762,3.702685548944491
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,50,"briefing, morning, friday, january, tuesday",0,0.0030701754385964,3.678102504156509
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,227,"climb, closure, tourism, closed, calls",0,0.004876355461518,3.628333129540932
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,408,"christmas, island, shopping, day, lunch",0,0.0088202001297976,3.6091630749970975
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,568,"serial, claremont, killings, trial, killer",0,0.0057958091841284,3.563216785683296
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,118,"climate, australia, change, australians, pacific",0,0.0021551724137931,3.5001574775737376
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,559,"rain, queensland, rainfall, heavy, west",0,0.0056133025781774,3.4224090824326514
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,175,"sydney, briefing, morning, adelaide, thursday",0,0.0025191471041421,3.3688330414991037
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,169,"open, australian, djokovic, federer, nadal",0,0.0107813366813629,3.3137940661008995
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,267,"day, test, mcg, australia, india",0,0.0033898305084745,3.2541998962871292
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,514,"dance, dancing, ballet, australian, new",0,0.0029661016949152,3.2465899476998903
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,248,"sanders, bernie, warren, elizabeth, democratic",0,0.0030172413793103,3.2436323735981913
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,136,"new, years, eve, sydney, day",0,0.0033426446717753,3.2158033704476208
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,56,"nols, cns, nolb, backstory, test",0,0.0029426870902444,3.211700751885838
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,567,"claremont, bradley, serial, killer, trial",0,0.0044688646692426,3.055350053750085
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,166,"barty, ash, open, australian, tennis",0,0.0116426756985605,3.024869694382837
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,304,"gobbo, nicola, lawyer, commission, royal",0,0.003789767062449,2.9958535348908204
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,606,"mclachlan, craig, court, assault, case",0,0.0022291573785109,2.951835597900911
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,82,"morrison, climate, scott, change, summit",0,0.0025862068965517,2.9406154140207956
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,170,"kyrgios, nick, open, australian, tomic",0,0.0056083775139113,2.9110904731927785
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,158,"virginia, trioli, weekend, reads, news",0,0.0013374944271065,2.902802194430522
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,92,"meghan, harry, prince, markle, royal",0,0.0099168966977755,2.8718222535443463
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,511,"bats, flying, bat, foxes, fox",0,0.0021186440677966,2.8443555265873273
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-25,48,"senator, tax, medevac, federal, nation",0,0.0022291573785109,2.7972106618534274
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,562,"heatwave, record, weather, perth, heat",0,0.0061076756415175,2.7750187958275103
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,226,"iran, trump, donald, sanctions, nuclear",0,0.0042372881355932,2.76646651867935
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,167,"tennis, open, australian, murray, andy",0,0.0034599550351835,2.7502253021229
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,308,"dinosaur, dinosaurs, fossil, new, fossils",0,0.0021551724137931,2.7365904206886387
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,27,"friday, wednesday, tuesday, thursday, monday",0,0.0039473684210526,2.6732900136133324
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,520,"birds, bird, parrot, night, endangered",0,0.0044383099709071,2.6697090625791904
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,541,"drought, farmers, rain, nsw, water",1,0.0059873351154739,2.658829330867842
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,328,"eating, disorders, disorder, anorexia, treatment",0,0.0013157894736842,2.6537322151151286
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,543,"dust, storm, storms, mildura, queensland",0,0.00216156216682,2.6076577721369114
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,50,"briefing, morning, friday, january, tuesday",0,0.00216156216682,2.5932595933758047
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,523,"fever, swine, african, pigs, pork",0,0.0016720671319375,2.545376412409599
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2020-01-22,325,"blind, vision, braille, national, impaired",0,0.0012931034482758,2.5448255381640337
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,614,"church, pope, catholic, abuse, francis",0,0.003789767062449,2.5364210858911775
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,451,"australians, australia, australias, migrants, older",0,0.0044731336709975,2.5144030544882483
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-12-23,489,"helicopter, rescue, pilot, helicopters, chopper",0,0.0012711864406779,2.51400046320459
+black_summer,Black Summer bushfires,ENV_FIRES,spike_events,2019-11-01,204,"lebanon, protesters, protests, lebanese, beirut",0,0.0017915022159504,2.506029078934844
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,181,"grants, sports, mckenzie, bridget, morrison",0,0.0064655172413793,5.04785308991021
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,228,"sports, grants, government, sport, rorts",0,0.0047413793103448,4.7815988805153316
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,245,"kobe, bryant, lakers, nba, los",0,0.0068965517241379,4.765916136383622
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,583,"china, coronavirus, covid, wuhan, australia",4,0.0137960232415545,4.513462759096286
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,270,"peter, gutwein, premier, tasmanian, tasmania",0,0.0030172413793103,3.923276077029441
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,28,"thursday, tuesday, monday, wednesday, friday",0,0.0060439720867762,3.702685548944491
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,118,"climate, australia, change, australians, pacific",0,0.0021551724137931,3.5001574775737376
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,559,"rain, queensland, rainfall, heavy, west",0,0.0056133025781774,3.4224090824326514
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,169,"open, australian, djokovic, federer, nadal",0,0.0107813366813629,3.3137940661008995
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,248,"sanders, bernie, warren, elizabeth, democratic",0,0.0030172413793103,3.2436323735981913
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,166,"barty, ash, open, australian, tennis",0,0.0116426756985605,3.024869694382837
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,82,"morrison, climate, scott, change, summit",0,0.0025862068965517,2.9406154140207956
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,170,"kyrgios, nick, open, australian, tomic",0,0.0056083775139113,2.9110904731927785
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,92,"meghan, harry, prince, markle, royal",0,0.0099168966977755,2.8718222535443463
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,167,"tennis, open, australian, murray, andy",0,0.0034599550351835,2.7502253021229
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,308,"dinosaur, dinosaurs, fossil, new, fossils",0,0.0021551724137931,2.7365904206886387
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,543,"dust, storm, storms, mildura, queensland",0,0.00216156216682,2.6076577721369114
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,50,"briefing, morning, friday, january, tuesday",0,0.00216156216682,2.5932595933758047
+covid_first_au,First Australian COVID case,HEALTH_PANDEMIC,spike_events,2020-01-22,325,"blind, vision, braille, national, impaired",0,0.0012931034482758,2.5448255381640337
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,247,"coronavirus, afl, nrl, season, players",0,0.0125,5.63640459756576
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,246,"coronavirus, sport, sports, community, pandemic",0,0.0043103448275862,5.153106767659021
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,233,"coronavirus, scott, covid, national, cabinet",0,0.0081712151945418,5.148750847545999
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,443,"stimulus, coronavirus, package, government, covid",0,0.0077586206896551,5.087620429457128
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,372,"coronavirus, school, schools, students, covid",0,0.018465394417662,4.84578998539798
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,593,"pandemic, new, cases, virus, worlds",0,0.0187340251312426,4.730601238658177
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,439,"supermarket, shopping, panic, buying, retail",0,0.0060170031962629,4.482316932190999
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,548,"tasmania, coronavirus, cases, west, outbreak",0,0.0056930224475821,4.153725599796253
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,395,"updates, live, australia, covid, latest",0,0.0068786879955744,3.961654786743218
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,581,"italy, coronavirus, covid, lockdown, japan",1,0.0059472404589519,3.9043084437223583
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,601,"australia, restrictions, south, travel, lifted",1,0.0017487612393187,3.872985487458935
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,426,"coronavirus, rent, rental, covid, housing",0,0.0052585978158552,3.8489809209684727
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,425,"coronavirus, home, workers, work, working",0,0.0030172413793103,3.800635421383487
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,594,"australia, australians, new, stay, australias",0,0.001708579199705,3.7195951913325143
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,152,"hand, sanitiser, coronavirus, handwashing, covid",0,0.0021551724137931,3.5664639729821586
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,430,"coronavirus, jobkeeper, jobs, jobseeker, unemployment",0,0.0113401692826076,3.554341228960291
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,605,"nsw, cases, new, records, infections",0,0.0073275862068965,3.537430678766896
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,442,"coronavirus, economy, economic, covid, recession",0,0.0046233716475095,3.497040992338838
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,281,"coronavirus, cruise, ship, covid, ships",0,0.0087392087100848,3.460409539002988
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,602,"tourism, queensland, tourists, travel, amid",0,0.0021079620474713,3.4169007716376094
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,591,"coronavirus, covid, deaths, death, toll",0,0.0034888791975577,3.4040753342765084
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,105,"coronavirus, ruby, cruise, inquiry, diamond",0,0.0095944177932839,3.3622724479763098
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,174,"coronavirus, racism, china, australia, racist",0,0.0021805494984736,3.343650789046038
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,575,"childcare, free, centre, government, workers",0,0.003064033436469,3.34076522092899
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,604,"queensland, cases, brisbane, covid, new",0,0.0038793103448275,3.185628791107842
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,574,"coronavirus, mental, health, covid, anxiety",0,0.0017444395987788,3.1666787295889307
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,422,"coronavirus, airline, court, nsw, virgin",0,0.0025862068965517,3.134501053382851
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,555,"border, hard, borders, closure, says",1,0.0017241379310344,3.079593916156915
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,528,"coronavirus, music, covid, live, festival",0,0.0043103448275862,3.0694804406604725
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,572,"restrictions, victoria, melbourne, stage, fines",1,0.0052361372575583,3.012623191916791
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,39,"wednesday, july, june, friday, monday",0,0.0039249890972525,2.9776605740654363
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,470,"coronavirus, market, share, markets, stock",0,0.0029206467242145,2.953497034906833
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,433,"coronavirus, business, businesses, small, pandemic",0,0.0021551724137931,2.942656470828169
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,64,"boris, johnson, coronavirus, covid, lockdown",1,0.003510253457474,2.9017574590722996
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,143,"victims, families, trial, suspects, men",0,0.0025862068965517,2.8801854083643796
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,383,"tracing, coronavirus, contact, app, covid",0,0.0065416484954208,2.8571882251768437
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,426,"coronavirus, rent, rental, covid, housing",0,0.0038793103448275,2.8392456047603556
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,548,"tasmania, coronavirus, cases, west, outbreak",0,0.0038793103448275,2.8301926012865586
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,440,"coronavirus, food, covid, pandemic, meat",0,0.0035173537270911,2.822514900749823
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,424,"staff, joyce, alan, cut, workers",0,0.0038793103448275,2.77725127813347
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,484,"fruit, fly, armyworm, fall, pest",0,0.0026245476909276,2.738236058781832
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,603,"coronavirus, flight, flights, australia, virgin",0,0.0021394215993608,2.7062084157251336
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,95,"norman, swan, looks, says, explains",0,0.0017241379310344,2.6904464211634016
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,534,"cyclone, fiji, vanuatu, harold, yasa",0,0.0039249890972525,2.6570599693300707
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-04-05,239,"coronavirus, superannuation, early, super, access",0,0.0008769172347587,2.5849046081621787
+national_lockdown,National lockdown,HEALTH_PANDEMIC,spike_events,2020-03-11,573,"children, life, families, child, baby",0,0.0021551724137931,2.56077947555674

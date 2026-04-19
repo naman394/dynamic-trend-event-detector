@@ -6,7 +6,7 @@ We flag a bin when that velocity's **z-score within the same topic's time series
 exceeds a threshold (default 2.5), so spikes are "unusually sharp jumps for that
 topic alone" — comparable across topics without fixing one global velocity cutoff.
 
-Output: ``reports/topic_modeling/spike_events.csv``
+Output: ``reports/topic_modeling/12_spikes_anchors/spike_events.csv``
   columns: topic_id, spike_date, velocity, velocity_z, keywords
 
 Run (from project root):
@@ -28,8 +28,8 @@ import pandas as pd
 from scipy import stats
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 
-DEFAULT_TOT = "reports/topic_modeling/topics_over_time.csv"
-DEFAULT_OUT = "reports/topic_modeling/spike_events.csv"
+DEFAULT_TOT = "reports/topic_modeling/11_lda_sbert/topics_over_time.csv"
+DEFAULT_OUT = "reports/topic_modeling/12_spikes_anchors/spike_events.csv"
 DEFAULT_PKL = "data/df_clean.pkl"
 DEFAULT_BUNDLE = "models/sbert_topic_bundle.joblib"
 
@@ -180,14 +180,24 @@ def build_spike_table(
 
     df = None
     if os.path.isfile(df_clean_path) and topic_labels is not None:
-        df = pd.read_pickle(df_clean_path)
-        if len(topic_labels) != len(df):
+        try:
+            df = pd.read_pickle(df_clean_path)
+        except Exception as e:
+            # Keep spike detection running even if legacy pickle cannot be loaded.
+            print(
+                f"Warning: could not read {df_clean_path} ({type(e).__name__}). "
+                "Falling back to bundle/topic words for keywords."
+            )
             df = None
             topic_labels = None
-        else:
-            df = df.copy()
-            df["publish_date"] = pd.to_datetime(df["publish_date"])
-            df["_topic_id"] = topic_labels
+        if df is not None:
+            if len(topic_labels) != len(df):
+                df = None
+                topic_labels = None
+            else:
+                df = df.copy()
+                df["publish_date"] = pd.to_datetime(df["publish_date"])
+                df["_topic_id"] = topic_labels
 
     spikes: list[dict[str, Any]] = []
     for topic_id in sorted(tot["topic_id"].unique()):
