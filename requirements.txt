@@ -27,3 +27,19 @@ google-cloud-bigquery-storage>=2.24  # optional: uses Storage Read API for to_da
 pandas-gbq>=0.19
 db-dtypes>=1.2
 pyarrow>=14.0  # used with BigQuery Storage path for faster/larger downloads
+
+# ── Feature 1: Streamlit Interactive Dashboard ─────────────────────────────
+streamlit>=1.33            # dashboard — run: streamlit run dashboard.py
+
+# ── Feature 2: NER Entity Tracker ─────────────────────────────────────────
+spacy>=3.7                 # NER pipeline
+# After install, download a model (choose one):
+#   python -m spacy download en_core_web_sm   (12 MB, fast)
+#   python -m spacy download en_core_web_lg   (700 MB, most accurate)
+
+# ── Feature 3: LSTM Autoencoder Anomaly Detector ──────────────────────────
+torch>=2.0                 # PyTorch for LSTM autoencoder
+
+# ── Feature 4: Granger Causality Network ──────────────────────────────────
+statsmodels>=0.14          # grangercausalitytests
+networkx>=3.0              # graph construction and layout
