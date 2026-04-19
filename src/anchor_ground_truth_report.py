@@ -3,8 +3,8 @@ Match spike_events.csv to three ground-truth news anchors (no GDELT call).
 
 Outputs
 -------
-  reports/topic_modeling/anchor_ground_truth_detection.csv
-  reports/topic_modeling/anchor_ground_truth_detection_detail.csv
+  reports/topic_modeling/12_spikes_anchors/anchor_ground_truth_detection.csv
+  reports/topic_modeling/12_spikes_anchors/anchor_ground_truth_detection_detail.csv
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ from typing import Any, Optional
 
 import pandas as pd
 
-REPORTS = "reports/topic_modeling"
+REPORTS = "reports/topic_modeling/12_spikes_anchors"
 
 
 @dataclass(frozen=True)

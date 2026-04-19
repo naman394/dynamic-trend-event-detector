@@ -69,6 +69,7 @@ All modules are implemented and fully operational:
 | 10 | `10_project_walkthrough.ipynb` | **Project walkthrough** | Step-by-step guide + **why** each stage exists (no training) |
 | 11 | `11_topic_modeling_lda_bertopic.ipynb` | **LDA vs SBERT** | 2019–2021: Gensim C_V sweep + **SBERT** (`all-MiniLM-L6-v2`) + UMAP + HDBSCAN, TF-IDF topic words, **`topics_over_time.csv`**, theme-keyword tables (spikes → notebook **12**) |
 | 12 | `12_phase4_trend_and_events.ipynb` | **Spikes + anchors** | After notebook 11: builds `spike_events.csv` (per-topic z-score on growth-velocity > 2.5) and optional `anchor_ground_truth_detection.csv` |
+| 13 | `13_gdelt_spike_bigquery_validation.ipynb` | **GDELT BigQuery** | Optional: validate spikes vs `gdelt-bq.gdeltv2.gkg_partitioned` → `gdelt_validation.csv` + dual-axis HTML |
 
 ---
 
@@ -275,6 +276,9 @@ GDELT Live API (updated every 15 min)
 | `src/hybrid_temporal.py` | Duplicate TF-IDF + SBERT hybrid — superseded by dedicated `baseline.py` + `deep_learning.py` |
 | BERTopic integration | Replaced by the more controlled SBERT + K-Means approach in `deep_learning.py` |
 | `reports/hybrid_impact/` | Output directory of removed hybrid module |
+| Old `bertopic_*.html`, `lda_vs_bertopic_*`, Phase-4 CSV/HTML under `reports/topic_modeling/` | Superseded by **LDA + SBERT** outputs in `11_lda_sbert/`; spike pipeline no longer emits those artifacts |
+
+Topic-modeling outputs are grouped under `reports/topic_modeling/{11_lda_sbert,12_spikes_anchors,13_gdelt_bigquery}/` — see `reports/README.md`.
 
 ---
 
@@ -312,11 +316,16 @@ dynamic-trend-event-detector/
 │   ├── visualize_results.py
 │   └── generate_all_visuals.py     # Regenerate all charts from cached results
 ├── reports/
+│   ├── README.md                   # Index: where each notebook’s outputs live
 │   ├── pipeline_overview.png       # Full pipeline diagram
 │   ├── baseline/                   # Baseline charts + CSV
 │   ├── advanced_ml/                # LDA charts, report, CSV
 │   ├── deep_learning/              # SBERT scatter plots, velocity charts, cluster CSV
 │   ├── eda/                        # EDA charts
+│   ├── topic_modeling/             # Notebooks 11–13 (subfolders by stage)
+│   │   ├── 11_lda_sbert/           # LDA sweep, SBERT HTML, topics_over_time.csv
+│   │   ├── 12_spikes_anchors/      # spike_events.csv, anchor_ground_truth_*.csv
+│   │   └── 13_gdelt_bigquery/      # gdelt_validation.*, GDELT_ANCHOR_EVENT_VALIDATION.md
 │   ├── event_impact_scores.csv     # SBERT-scored impact results
 │   └── rupture_verification.csv    # Narrative rupture headline evidence
 ├── refresh_gdelt.sh                # One-command live GDELT refresh script
@@ -378,11 +387,39 @@ Use the **Python 3.11** environment (`venv311`) so Gensim, BERTopic, and HDBSCAN
 
 Optional CLI equivalents (same outputs): `python src/prepare_df_clean.py` then `python src/topic_modeling_lda_bertopic.py` (add `--max-docs N` for a smoke test).
 
-Outputs land under `reports/topic_modeling/` (coherence sweep plot, CSVs, Plotly HTML) and `models/sbert_topic_bundle.joblib`.
+Outputs land under `reports/topic_modeling/11_lda_sbert/` (coherence sweep plot, CSVs, Plotly HTML) and `models/sbert_topic_bundle.joblib`. See `reports/README.md` for the full layout.
 
 **Spike events:** after `topics_over_time.csv` exists, run  
 `python src/spike_events_from_topics_over_time.py`  
-to write `reports/topic_modeling/spike_events.csv` (per-topic **z-score on growth-velocity** > 2.5 + keywords). Run **notebook 12** after notebook 11 (or this CLI alone if `topics_over_time.csv` already exists).
+to write `reports/topic_modeling/12_spikes_anchors/spike_events.csv` (per-topic **z-score on growth-velocity** > 2.5 + keywords). Run **notebook 12** after notebook 11 (or this CLI alone if `topics_over_time.csv` already exists under `11_lda_sbert/`).
+
+### GDELT BigQuery spike validation (optional)
+
+**Goal:** Compare each spike’s keywords to **global news volume** from the public GDELT GKG 2.0 table in BigQuery, in a ±30 day window, and plot **dual-axis** charts (local topic growth-velocity vs GDELT article counts per day).
+
+**One-time setup**
+
+1. Create a project in [Google Cloud Console](https://console.cloud.google.com).
+2. Enable **BigQuery API**. (BigQuery has a free query tier; each scan still depends on bytes read—use small `--max-spikes` while testing.)
+3. Install: `pip install google-cloud-bigquery pandas-gbq db-dtypes` (already listed in `requirements.txt`).
+4. Authenticate: `gcloud auth application-default login` *or* set `GOOGLE_APPLICATION_CREDENTIALS` to a service-account JSON path.
+5. Set `GOOGLE_CLOUD_PROJECT` to your project id.
+
+**Run**
+
+```bash
+export GOOGLE_CLOUD_PROJECT=your-project-id
+python src/gdelt_bigquery_spike_validation.py \
+  --max-spikes 10 --window-days 30 --max-plots 5
+```
+
+**Outputs**
+
+- `reports/topic_modeling/13_gdelt_bigquery/gdelt_validation.csv` — daily `gdelt_article_count` per spike window (keywords matched in `V2Themes` / `V2Persons`, case-insensitive).
+- `reports/topic_modeling/13_gdelt_bigquery/gdelt_validation.html` — Plotly figures (left: topic **growth velocity** from `11_lda_sbert/topics_over_time.csv`, right: GDELT counts).
+- `reports/topic_modeling/13_gdelt_bigquery/GDELT_ANCHOR_EVENT_VALIDATION.md` — three-anchor GDELT summary (written by the script or notebook 13).
+
+Notebook **`13_gdelt_spike_bigquery_validation.ipynb`** mirrors the same steps.
 
 ---
 

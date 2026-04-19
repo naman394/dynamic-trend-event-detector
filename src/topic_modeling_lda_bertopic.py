@@ -7,12 +7,12 @@ SBERT (all-MiniLM-L6-v2) embeddings → UMAP (5D) → HDBSCAN; topic words = TF-
 
 Outputs
 -------
-  reports/topic_modeling/lda_k_selection_metrics.csv  (C_V, U_Mass, diversity, perplexity per K)
-  reports/topic_modeling/lda_k_metrics_sweep.png
-  reports/topic_modeling/topics_over_time.csv
-  reports/topic_modeling/sbert_intertopic.html
-  reports/topic_modeling/sbert_topics_over_time.html
-  reports/topic_modeling/lda_vs_sbert_*.csv
+  reports/topic_modeling/11_lda_sbert/lda_k_selection_metrics.csv  (C_V, U_Mass, diversity, perplexity per K)
+  reports/topic_modeling/11_lda_sbert/lda_k_metrics_sweep.png
+  reports/topic_modeling/11_lda_sbert/topics_over_time.csv
+  reports/topic_modeling/11_lda_sbert/sbert_intertopic.html
+  reports/topic_modeling/11_lda_sbert/sbert_topics_over_time.html
+  reports/topic_modeling/11_lda_sbert/lda_vs_sbert_*.csv
   models/sbert_topic_bundle.joblib
 
 Requires: Python 3.11 env with gensim, sentence-transformers, umap-learn, hdbscan, scikit-learn, plotly
@@ -45,7 +45,7 @@ from umap import UMAP
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
-OUT_DIR = "reports/topic_modeling"
+OUT_DIR = "reports/topic_modeling/11_lda_sbert"
 MODEL_DIR = "models"
 PKL_PATH = "data/df_clean.pkl"
 

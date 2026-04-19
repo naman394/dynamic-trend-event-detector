@@ -1,4 +1,0 @@
-anchor_id,anchor_label,date_window,expected_keywords_probe,gdelt_theme_expected,detected,best_source,best_date,best_topic_id,best_keywords,probe_hits,note
-black_summer,Black Summer bushfires,2019-11-01 .. 2020-01-31,"fire, smoke, evacuation, blaze, nsw, bushfire, bushfires",ENV_FIRES,yes,spike_events,2019-12-23,139,"bushfire, bushfires, nsw, fires, victoria",4,GDELT verification pending — keyword overlap only
-covid_first_au,First Australian COVID case,2020-01-20 .. 2020-02-05,"virus, coronavirus, china, health, travel, covid",HEALTH_PANDEMIC,yes,spike_events,2020-01-22,583,"coronavirus, china, wuhan, chinese, toll",3,GDELT verification pending — keyword overlap only
-national_lockdown,National lockdown,2020-03-01 .. 2020-04-15,"lockdown, restrictions, border, quarantine",HEALTH_PANDEMIC,yes,spike_events,2020-03-11,581,"coronavirus, italy, lockdown, death, toll",1,GDELT verification pending — keyword overlap only
