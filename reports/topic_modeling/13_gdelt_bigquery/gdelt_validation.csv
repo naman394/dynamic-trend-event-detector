@@ -1,0 +1,611 @@
+spike_idx,topic_id,spike_date,keywords,search_patterns,window_start,window_end,query_error,pub_date,gdelt_article_count
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-10-27,25703
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-10-28,26481
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-10-29,26094
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-10-30,17701
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-10-31,14967
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-01,25308
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-02,23504
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-03,25262
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-04,26374
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-05,26413
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-06,14406
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-07,13185
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-08,21006
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-09,24994
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-10,24217
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-11,23315
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-12,23054
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-13,13810
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-14,11679
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-15,21520
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-16,24851
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-17,24765
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-18,24076
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-19,24755
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-20,15167
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-21,12566
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-22,22670
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-23,23849
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-24,24107
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-25,20633
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-26,25136
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-27,20524
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-28,18506
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-29,29355
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-11-30,29737
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-01,30130
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-02,29780
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-03,29299
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-04,17712
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-05,15055
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-06,24208
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-07,25367
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-08,27314
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-09,28317
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-10,24396
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-11,15526
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-12,14718
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-13,24374
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-14,28378
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-15,29556
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-16,29177
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-17,29094
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-18,19270
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-19,18196
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-20,27514
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-21,32679
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-22,33597
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-23,30814
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-24,25611
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-25,15644
+0,61,2021-11-26,"omicron, variant, covid, says, nsw",omicron|variant|covid,2021-10-27,2021-12-26,,2021-12-26,14438
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-10-27,37917
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-10-28,38715
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-10-29,38267
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-10-30,26200
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-10-31,26443
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-01,34648
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-02,38956
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-03,41669
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-04,37782
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-05,37397
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-06,30297
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-07,24279
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-08,37922
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-09,39978
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-10,38024
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-11,38770
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-12,36312
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-13,27599
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-14,25780
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-15,40417
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-16,41740
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-17,40580
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-18,40461
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-19,38968
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-20,30172
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-21,27858
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-22,43070
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-23,42092
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-24,39511
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-25,37636
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-26,32219
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-27,24586
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-28,22799
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-29,33240
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-11-30,37527
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-01,37397
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-02,37304
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-03,37571
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-04,28444
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-05,24997
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-06,34230
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-07,35214
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-08,35885
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-09,36048
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-10,38141
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-11,27002
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-12,22681
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-13,34436
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-14,38433
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-15,40077
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-16,37115
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-17,37566
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-18,26123
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-19,24297
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-20,32412
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-21,35017
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-22,32786
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-23,35079
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-24,29841
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-25,18792
+1,79,2021-11-26,"cleo, smith, police, audio, finding",cleo|smith|police,2021-10-27,2021-12-26,,2021-12-26,19988
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-20,107
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-21,78
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-22,69
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-23,128
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-24,145
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-25,171
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-26,209
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-27,183
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-28,158
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-29,94
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-30,285
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-08-31,334
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-01,596
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-02,543
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-03,539
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-04,363
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-05,333
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-06,518
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-07,575
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-08,589
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-09,583
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-10,515
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-11,381
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-12,278
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-13,489
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-14,488
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-15,450
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-16,491
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-17,519
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-18,294
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-19,312
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-20,498
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-21,458
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-22,536
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-23,467
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-24,451
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-25,340
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-26,324
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-27,461
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-28,559
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-29,462
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-09-30,501
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-01,412
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-02,241
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-03,207
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-04,230
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-05,274
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-06,255
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-07,277
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-08,265
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-09,133
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-10,146
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-11,188
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-12,204
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-13,224
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-14,319
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-15,179
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-16,94
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-17,95
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-18,176
+2,254,2021-09-19,"september, october",september|october,2021-08-20,2021-10-19,,2021-10-19,180
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-10,26179
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-11,26104
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-12,25188
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-13,26512
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-14,22537
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-15,14786
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-16,13703
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-17,21166
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-18,22935
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-19,20410
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-20,20467
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-21,21726
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-22,14353
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-23,14288
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-24,25800
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-25,33789
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-26,38456
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-27,47220
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-28,50555
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-02-29,32658
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-01,29085
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-02,47350
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-03,53959
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-04,56987
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-05,57977
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-06,61894
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-07,40586
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-08,36022
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-09,65662
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-10,81938
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-11,93703
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-12,114318
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-13,124402
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-14,84977
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-15,78110
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-16,140610
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-17,159471
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-18,170415
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-19,170795
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-20,161753
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-21,102254
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-22,95110
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-23,143544
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-24,158473
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-25,163055
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-26,162319
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-27,155211
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-28,98894
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-29,86169
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-30,140812
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-03-31,145077
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-01,149079
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-02,153357
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-03,144747
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-04,90523
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-05,79428
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-06,134264
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-07,135207
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-08,137340
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-09,135125
+3,247,2020-03-11,"coronavirus, afl, season, nrl, league",coronavirus|afl|season,2020-02-10,2020-04-10,,2020-04-10,115115
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-02,78
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-03,49
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-04,38
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-05,24
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-06,46
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-07,71
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-08,95
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-09,91
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-10,68
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-11,164
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-12,47
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-13,102
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-14,143
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-15,76
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-16,80
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-17,96
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-18,55
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-19,55
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-20,40
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-21,110
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-22,82
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-23,60
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-24,72
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-25,31
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-26,34
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-27,48
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-28,84
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-29,59
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-30,83
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-07-31,71
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-01,36
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-02,37
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-03,70
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-04,91
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-05,104
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-06,69
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-07,52
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-08,37
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-09,85
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-10,784
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-11,554
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-12,143
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-13,107
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-14,135
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-15,29
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-16,47
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-17,74
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-18,51
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-19,58
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-20,69
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-21,299
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-22,387
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-23,37
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-24,188
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-25,83
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-26,177
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-27,69
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-28,73
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-29,51
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-30,16
+4,203,2020-08-01,"beirut, explosion, blast, massive, lebanese",beirut|explosion|blast,2020-07-02,2020-08-31,,2020-08-31,60
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-10,85727
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-11,85714
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-12,90332
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-13,90620
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-14,81202
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-15,52891
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-16,49180
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-17,80767
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-18,83075
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-19,83423
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-20,81609
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-21,83377
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-22,52226
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-23,49921
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-24,79386
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-25,90678
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-26,88144
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-27,97773
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-28,95619
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-02-29,57982
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-01,53715
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-02,87179
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-03,95107
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-04,97102
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-05,99281
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-06,97522
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-07,61385
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-08,54350
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-09,90709
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-10,103013
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-11,108645
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-12,117863
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-13,113266
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-14,78906
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-15,72671
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-16,122210
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-17,132835
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-18,138405
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-19,138362
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-20,130093
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-21,81596
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-22,77577
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-23,111557
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-24,120112
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-25,121919
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-26,123432
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-27,116605
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-28,76830
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-29,70060
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-30,109130
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-03-31,110955
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-01,112472
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-02,115058
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-03,107377
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-04,66590
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-05,60109
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-06,96419
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-07,99618
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-08,104443
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-09,102284
+5,246,2020-03-11,"sport, outbreak, events, amid, italian",sport|outbreak|events,2020-02-10,2020-04-10,,2020-04-10,89292
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-10,32506
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-11,33741
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-12,36037
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-13,35750
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-14,33318
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-15,16940
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-16,16716
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-17,28323
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-18,32234
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-19,34785
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-20,34599
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-21,32716
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-22,17070
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-23,15525
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-24,28459
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-25,32658
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-26,33362
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-27,35348
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-28,33010
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-02-29,17037
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-01,16311
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-02,31926
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-03,35839
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-04,35376
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-05,35226
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-06,33092
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-07,18036
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-08,15203
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-09,33671
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-10,37692
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-11,38965
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-12,38888
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-13,35959
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-14,17935
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-15,17441
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-16,35887
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-17,36173
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-18,39645
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-19,40730
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-20,36402
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-21,19537
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-22,18654
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-23,35113
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-24,35763
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-25,38949
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-26,39065
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-27,36856
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-28,20131
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-29,18948
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-30,34839
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-03-31,36721
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-01,37159
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-02,35598
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-03,34378
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-04,16974
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-05,16335
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-06,28768
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-07,32468
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-08,35840
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-09,37482
+6,233,2020-03-11,"scott, economic, recession, stimulus, addresses",scott|economic|recession,2020-02-10,2020-04-10,,2020-04-10,28478
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-08-27,967
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-08-28,1189
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-08-29,784
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-08-30,498
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-08-31,1063
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-01,1157
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-02,1283
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-03,1005
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-04,982
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-05,653
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-06,406
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-07,1046
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-08,879
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-09,938
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-10,911
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-11,1282
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-12,722
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-13,446
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-14,853
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-15,1516
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-16,1154
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-17,1109
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-18,1221
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-19,735
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-20,547
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-21,1489
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-22,1217
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-23,1097
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-24,1129
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-25,1297
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-26,597
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-27,8711
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-28,7481
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-29,6443
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-09-30,5471
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-01,5841
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-02,5672
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-03,3656
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-04,4560
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-05,3776
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-06,3518
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-07,3757
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-08,3704
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-09,1701
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-10,5999
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-11,4360
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-12,3381
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-13,3109
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-14,2890
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-15,2513
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-16,1098
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-17,3740
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-18,3011
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-19,2362
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-20,2238
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-21,2146
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-22,2088
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-23,1078
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-24,1403
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-25,1547
+7,38,2020-09-26,"azerbaijan, armenia, karabakh, nagorno, fighting",azerbaijan|armenia|karabakh,2020-08-27,2020-10-26,,2020-10-26,2535
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-13,3473
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-14,6354
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-15,8479
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-16,9073
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-17,7968
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-18,7472
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-19,3871
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-20,3261
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-21,6704
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-22,8018
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-23,8262
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-24,8079
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-25,6965
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-26,3825
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-27,3758
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-28,7411
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-29,7498
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-06-30,7998
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-01,7793
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-02,6561
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-03,3018
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-04,3363
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-05,6208
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-06,7149
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-07,7842
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-08,6883
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-09,7106
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-10,4150
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-11,3345
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-12,6584
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-13,7521
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-14,7926
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-15,7799
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-16,7601
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-17,3667
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-18,3066
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-19,6228
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-20,6974
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-21,7071
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-22,8576
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-23,6744
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-24,3448
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-25,3356
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-26,7135
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-27,8671
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-28,8495
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-29,6763
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-30,5341
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-07-31,3272
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-01,2827
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-02,4547
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-03,5743
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-04,5932
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-05,5517
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-06,4857
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-07,2167
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-08,1703
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-09,5406
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-10,5042
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-11,5128
+8,586,2021-07-13,"nsw, new, records, local, recorded",nsw|new|records,2021-06-13,2021-08-12,,2021-08-12,5639
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-10,146280
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-11,155458
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-12,162211
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-13,162223
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-14,143403
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-15,90123
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-16,82820
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-17,134343
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-18,146331
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-19,153103
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-20,152044
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-21,144494
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-22,90218
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-23,81277
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-24,136670
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-25,157247
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-26,160037
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-27,174686
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-28,168957
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-02-29,105748
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-01,100911
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-02,158753
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-03,175240
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-04,182295
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-05,180036
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-06,175288
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-07,111144
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-08,100055
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-09,164428
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-10,190288
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-11,202530
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-12,219208
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-13,218605
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-14,146711
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-15,136490
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-16,234263
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-17,255760
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-18,274766
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-19,271907
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-20,255850
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-21,164439
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-22,153931
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-23,233461
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-24,256375
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-25,262888
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-26,265986
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-27,253100
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-28,162574
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-29,147010
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-30,237235
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-03-31,246801
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-01,249991
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-02,254548
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-03,240251
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-04,153247
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-05,135038
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-06,226787
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-07,230519
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-08,236412
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-09,235180
+9,443,2020-03-11,"coronavirus, package, government, economic, federal",coronavirus|package|government,2020-02-10,2020-04-10,,2020-04-10,200496

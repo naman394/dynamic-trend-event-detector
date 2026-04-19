@@ -20,3 +20,10 @@ gensim>=4.3
 # LDA vs SBERT clusters (notebook 11 / src/topic_modeling_lda_bertopic.py)
 hdbscan>=0.8
 plotly>=5.0
+
+# GDELT GKG in BigQuery (spike validation — optional)
+google-cloud-bigquery>=3.14
+google-cloud-bigquery-storage>=2.24  # optional: uses Storage Read API for to_dataframe(); without it, REST still fetches all rows (UserWarning only)
+pandas-gbq>=0.19
+db-dtypes>=1.2
+pyarrow>=14.0  # used with BigQuery Storage path for faster/larger downloads
