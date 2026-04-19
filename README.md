@@ -4,6 +4,10 @@
 
 **Authors:** Navnit Naman (230085) & Kanhaiya Kumar (230062) — Newton School of Technology, Rishihood University
 
+**Step-by-step pipeline & file-by-file explanation (for viva / presentation):**  
+- Notebook: [`notebooks/10_project_walkthrough.ipynb`](notebooks/10_project_walkthrough.ipynb) (interactive, **why** at each step)  
+- Markdown: [`docs/PROJECT_WALKTHROUGH.md`](docs/PROJECT_WALKTHROUGH.md)
+
 ---
 
 ## Table of Contents
@@ -62,6 +66,9 @@ All modules are implemented and fully operational:
 | 07 | `07_visualize_results.ipynb` | Results Dashboard | Consolidated output from all models |
 | 08 | `08_deep_learning_kmeans.ipynb` | **Deep Learning (SBERT + K-Means)** | K-Means on SBERT sentence embeddings, UMAP 3D/2D, **K=13** topic clusters, semantic velocity, growth velocity |
 | 09 | `09_gdelt_verification_impact.ipynb` | **GDELT Verification & SBERT Impact** | Rupture-triggered GDELT verification, SBERT S_I scoring |
+| 10 | `10_project_walkthrough.ipynb` | **Project walkthrough** | Step-by-step guide + **why** each stage exists (no training) |
+| 11 | `11_topic_modeling_lda_bertopic.ipynb` | **LDA vs SBERT** | 2019–2021: Gensim C_V sweep + **SBERT** (`all-MiniLM-L6-v2`) + UMAP + HDBSCAN, TF-IDF topic words, **`topics_over_time.csv`**, theme-keyword tables (spikes → notebook **12**) |
+| 12 | `12_phase4_trend_and_events.ipynb` | **Spikes + anchors** | After notebook 11: builds `spike_events.csv` (per-topic z-score on growth-velocity > 2.5) and optional `anchor_ground_truth_detection.csv` |
 
 ---
 
@@ -291,7 +298,8 @@ dynamic-trend-event-detector/
 │   ├── 06_event_impact_scoring.ipynb  # TF-IDF baseline scorer (see also 09)
 │   ├── 07_visualize_results.ipynb  # Consolidated results dashboard
 │   ├── 08_deep_learning_kmeans.ipynb  # SBERT + UMAP + K-Means (K=13)
-│   └── 09_gdelt_verification_impact.ipynb  # GDELT rupture verification + SBERT impact
+│   ├── 09_gdelt_verification_impact.ipynb  # GDELT rupture verification + SBERT impact
+│   └── 10_project_walkthrough.ipynb          # Step-by-step + rationale (viva / onboarding)
 ├── src/                            # Python source (mirrors notebooks)
 │   ├── eda.py
 │   ├── baseline.py
@@ -361,6 +369,20 @@ python run_all.py
 ./refresh_gdelt.sh 16        # last 4 hours
 ./refresh_gdelt.sh 96        # last 24 hours
 ```
+
+### Option D — LDA vs BERTopic on 2019–2021 clean headlines
+
+Use the **Python 3.11** environment (`venv311`) so Gensim, BERTopic, and HDBSCAN install cleanly.
+
+**Recommended:** run **[`notebooks/11_topic_modeling_lda_bertopic.ipynb`](notebooks/11_topic_modeling_lda_bertopic.ipynb)** — the full pipeline lives in the notebook (no script calls). Set `MAX_DOCS = None` in the first code cell for the full ~92k corpus, or an integer (e.g. `5000`) for a faster run.
+
+Optional CLI equivalents (same outputs): `python src/prepare_df_clean.py` then `python src/topic_modeling_lda_bertopic.py` (add `--max-docs N` for a smoke test).
+
+Outputs land under `reports/topic_modeling/` (coherence sweep plot, CSVs, Plotly HTML) and `models/sbert_topic_bundle.joblib`.
+
+**Spike events:** after `topics_over_time.csv` exists, run  
+`python src/spike_events_from_topics_over_time.py`  
+to write `reports/topic_modeling/spike_events.csv` (per-topic **z-score on growth-velocity** > 2.5 + keywords). Run **notebook 12** after notebook 11 (or this CLI alone if `topics_over_time.csv` already exists).
 
 ---
 
