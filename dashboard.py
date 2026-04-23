@@ -116,6 +116,101 @@ def load_ruptures():
     return pd.read_csv(RUPTURE_CSV)
 
 
+@st.cache_resource(show_spinner="Loading SBERT model…")
+def load_sbert():
+    from sentence_transformers import SentenceTransformer
+    return SentenceTransformer("all-MiniLM-L6-v2")
+
+
+def watchdog_search(keyword: str, gdelt_df: pd.DataFrame):
+    """
+    Filter GDELT snapshot for keyword, compute impact scores via SBERT,
+    and return (filtered_df, z_score, verdict).
+
+    Search strategy (any word in the keyword must match):
+      1. GDELT theme codes  — e.g. "economy" matches ECON_*, EPU_ECONOMY_*
+      2. Source name        — news outlet name
+      3. Article URL        — company/topic names often appear in URLs
+    """
+    import ast as _ast
+    import numpy as np
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    kw_full = keyword.strip().lower()
+    # search each word independently so "tata motors" finds articles with "tata" OR "motors"
+    kw_words = [w for w in kw_full.split() if len(w) > 2]
+    if not kw_words:
+        kw_words = [kw_full]
+
+    # parse theme_list if still a string
+    def _themes(v):
+        if isinstance(v, list):
+            return v
+        try:
+            return _ast.literal_eval(v)
+        except Exception:
+            return []
+
+    gdelt_df = gdelt_df.copy()
+    gdelt_df["_themes_parsed"] = gdelt_df["theme_list"].apply(_themes)
+    gdelt_df["_theme_str"] = gdelt_df["_themes_parsed"].apply(lambda t: " ".join(t).lower())
+
+    src_col = gdelt_df.get("SOURCECOMMONNAME", pd.Series("", index=gdelt_df.index)).fillna("").str.lower()
+    url_col = gdelt_df.get("DOCUMENTIDENTIFIER", pd.Series("", index=gdelt_df.index)).fillna("").str.lower()
+
+    # build mask: any word matches any field
+    mask = pd.Series(False, index=gdelt_df.index)
+    for w in kw_words:
+        mask |= (
+            gdelt_df["_theme_str"].str.contains(w, na=False)
+            | src_col.str.contains(w, na=False)
+            | url_col.str.contains(w, na=False)
+        )
+    matched = gdelt_df[mask].copy()
+
+    if matched.empty:
+        return pd.DataFrame(), 0.0, "NO DATA"
+
+    # ── SBERT impact scoring ─────────────────────────────────────────────────
+    model = load_sbert()
+
+    matched["_theme_str_full"] = matched["_themes_parsed"].apply(
+        lambda t: " ".join(t) if t else "general news"
+    )
+    all_theme_strings = gdelt_df["_theme_str"].replace("", "general news").tolist()
+    matched_strings   = matched["_theme_str_full"].tolist()
+
+    # encode all GDELT records for centroid, then encode matched
+    all_embs     = model.encode(all_theme_strings,   batch_size=128, normalize_embeddings=True, show_progress_bar=False)
+    matched_embs = model.encode(matched_strings,      batch_size=64,  normalize_embeddings=True, show_progress_bar=False)
+
+    global_centroid = all_embs.mean(axis=0, keepdims=True)
+    sims = cosine_similarity(matched_embs, global_centroid).flatten()
+    matched["semantic_uniqueness"] = 1.0 - sims
+    matched["tone_abs"]    = matched["tone_value"].abs()
+    matched["impact_score"] = matched["semantic_uniqueness"] * matched["tone_abs"]
+
+    # ── z-score verdict ──────────────────────────────────────────────────────
+    # Count articles per theme across full snapshot, compare keyword count
+    from collections import Counter
+    theme_counts = Counter(
+        t for themes in gdelt_df["_themes_parsed"] for t in themes
+    )
+    counts = np.array(list(theme_counts.values()), dtype=float)
+    mu, sigma = counts.mean(), counts.std()
+    kw_count = float(len(matched))
+    z = (kw_count - mu) / (sigma + 1e-9)
+
+    if z >= 2.5:
+        verdict = "BREAKING"
+    elif z >= 1.5:
+        verdict = "TRENDING"
+    else:
+        verdict = "NORMAL"
+
+    return matched, z, verdict
+
+
 def headlines_in_week(headlines_df, week_str):
     """Return headlines published in the given week string 'YYYY-MM-DD/YYYY-MM-DD'."""
     try:
@@ -196,6 +291,7 @@ tabs = st.tabs([
     "🤖 LSTM Anomaly",
     "🕸️ Causal Graph",
     "🌍 Multilingual",
+    "🎯 Topic Watchdog",
 ])
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -405,10 +501,18 @@ with tabs[2]:
             n_win = win_map[windows]
             with st.spinner(f"Fetching {n_win} GDELT window(s)…"):
                 result = subprocess.run(
-                    [sys.executable, str(SRC / "gdelt_fetcher.py"), f"--windows={n_win}"],
+                    [sys.executable, "-c",
+                     f"import sys; sys.path.insert(0,'.'); "
+                     f"from src.gdelt_fetcher import fetch_last_n_gkg; "
+                     f"df = fetch_last_n_gkg(n={n_win}, save_to='data/gdelt_processed.csv'); "
+                     f"print(f'Fetched {{len(df):,}} records')"],
                     capture_output=True, text=True, cwd=str(ROOT),
                 )
-            st.info(result.stdout[-300:] or "Done.")
+            if result.returncode == 0:
+                st.success(result.stdout.strip() or "Done.")
+                st.cache_data.clear()
+            else:
+                st.error(result.stderr[-300:])
 
     with col2:
         gdelt_df = load_gdelt()
@@ -762,3 +866,210 @@ with tabs[7]:
         st.divider()
         st.subheader("Raw Multilingual Signals")
         st.dataframe(multi_df.head(200), use_container_width=True)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# TAB 9 — Topic Watchdog
+# ══════════════════════════════════════════════════════════════════════════
+with tabs[8]:
+    st.header("🎯 Topic Watchdog — Real-Time Keyword Intelligence")
+    st.markdown(
+        "Type any keyword, brand, or topic. The system scans the live GDELT feed, "
+        "scores every matching article with **SBERT impact scoring**, and tells you "
+        "whether coverage is **Normal**, **Trending**, or **Breaking**."
+    )
+
+    col_input, col_btn = st.columns([4, 1])
+    with col_input:
+        wdog_keyword = st.text_input(
+            "Enter keyword to monitor:",
+            placeholder="e.g.  Tata Motors · Modi · AI regulation · Ukraine",
+            label_visibility="collapsed",
+        )
+    with col_btn:
+        wdog_go = st.button("Watch 🔍", type="primary", use_container_width=True)
+
+    # refresh GDELT inline
+    with st.expander("⚙️ Fetch fresh GDELT data before watching"):
+        w_col1, w_col2 = st.columns([2, 1])
+        with w_col1:
+            wdog_window = st.selectbox(
+                "Time window",
+                ["15 min (1)", "1 hour (4)", "4 hours (16)", "24 hours (96)"],
+                key="wdog_window",
+            )
+        with w_col2:
+            if st.button("🔄 Refresh GDELT", use_container_width=True, key="wdog_refresh"):
+                n = {"15 min (1)": 1, "1 hour (4)": 4, "4 hours (16)": 16, "24 hours (96)": 96}[wdog_window]
+                with st.spinner(f"Fetching {n} GDELT snapshot(s)…"):
+                    res = subprocess.run(
+                        [sys.executable, "-c",
+                         f"import sys; sys.path.insert(0,'.'); "
+                         f"from src.gdelt_fetcher import fetch_last_n_gkg; "
+                         f"df = fetch_last_n_gkg(n={n}, save_to='data/gdelt_processed.csv'); "
+                         f"print(f'Fetched {{len(df):,}} records')"],
+                        capture_output=True, text=True, cwd=str(ROOT),
+                    )
+                if res.returncode == 0:
+                    st.success(res.stdout.strip() or "GDELT refreshed!")
+                    st.cache_data.clear()
+                else:
+                    st.error(res.stderr[-300:])
+
+    # ── "What's hot right now" hint ───────────────────────────────────────────
+    gdelt_hint = load_gdelt()
+    if not gdelt_hint.empty:
+        import ast as _ast_hint
+        from collections import Counter as _C
+        _all_t = []
+        for v in gdelt_hint["theme_list"].dropna():
+            try:
+                _all_t.extend(_ast_hint.literal_eval(v) if isinstance(v, str) else v)
+            except Exception:
+                pass
+        _top = [t.lower().split("_")[0] for t, _ in _C(_all_t).most_common(40)]
+        _unique_hints = list(dict.fromkeys(_top))[:12]  # dedupe, keep order
+        st.caption(
+            f"💡 **{len(gdelt_hint):,} articles** in current snapshot · "
+            f"Try: " + "  ·  ".join(f"`{h}`" for h in _unique_hints)
+        )
+
+    st.divider()
+
+    if wdog_keyword.strip() and wdog_go:
+        gdelt_df = load_gdelt()
+        if gdelt_df.empty:
+            st.warning("No GDELT data loaded. Use the panel above to fetch fresh data first.")
+        else:
+            with st.spinner(f"Scanning GDELT for **{wdog_keyword}** and scoring with SBERT…"):
+                matched_df, z_score, verdict = watchdog_search(wdog_keyword, gdelt_df)
+
+            # ── Verdict banner ────────────────────────────────────────────────
+            if verdict == "BREAKING":
+                st.error(f"🔴 **BREAKING** — `{wdog_keyword}` is spiking at **{z_score:.1f}σ** above normal coverage")
+            elif verdict == "TRENDING":
+                st.warning(f"🟡 **TRENDING** — `{wdog_keyword}` is elevated at **{z_score:.1f}σ** above normal")
+            elif verdict == "NORMAL":
+                st.success(f"🟢 **NORMAL** — `{wdog_keyword}` is at routine coverage levels (z = {z_score:.1f})")
+            else:
+                st.info(f"No articles found mentioning **{wdog_keyword}** in the current GDELT snapshot.")
+
+            if not matched_df.empty:
+                # ── Top metrics ───────────────────────────────────────────────
+                m1, m2, m3, m4 = st.columns(4)
+                m1.metric("Articles Found", len(matched_df))
+                m2.metric("Avg Tone", f"{matched_df['tone_value'].mean():.2f}")
+                m3.metric("Avg Impact Score", f"{matched_df['impact_score'].mean():.3f}")
+                m4.metric(
+                    "Tone",
+                    "😟 Negative" if matched_df["tone_value"].mean() < -1
+                    else ("😊 Positive" if matched_df["tone_value"].mean() > 1 else "😐 Neutral")
+                )
+
+                st.divider()
+
+                col_left, col_right = st.columns(2)
+
+                # ── Article volume over time ───────────────────────────────────
+                with col_left:
+                    st.subheader("Coverage volume over time")
+                    if "DATE" in matched_df.columns:
+                        try:
+                            matched_df["_dt"] = pd.to_datetime(
+                                matched_df["DATE"].astype(str), format="%Y%m%d%H%M%S", errors="coerce"
+                            )
+                            time_series = (
+                                matched_df.dropna(subset=["_dt"])
+                                .set_index("_dt")
+                                .resample("15min")
+                                .size()
+                                .reset_index(name="count")
+                            )
+                            if not time_series.empty:
+                                fig_time = px.bar(
+                                    time_series, x="_dt", y="count",
+                                    labels={"_dt": "Time", "count": "Articles"},
+                                    title=f'Articles per 15-min window — "{wdog_keyword}"',
+                                    template="plotly_dark",
+                                    color="count",
+                                    color_continuous_scale="Reds",
+                                )
+                                fig_time.update_layout(height=320, showlegend=False,
+                                                       margin=dict(l=20, r=20, t=50, b=30))
+                                st.plotly_chart(fig_time, use_container_width=True)
+                        except Exception:
+                            st.info("Could not parse timestamps for time-series chart.")
+                    else:
+                        st.info("DATE column not available for time chart.")
+
+                # ── Tone distribution ─────────────────────────────────────────
+                with col_right:
+                    st.subheader("Tone distribution")
+                    fig_tone = px.histogram(
+                        matched_df, x="tone_value", nbins=30,
+                        labels={"tone_value": "Tone Score"},
+                        title=f'Sentiment spread — "{wdog_keyword}"',
+                        template="plotly_dark",
+                        color_discrete_sequence=["#9B59B6"],
+                    )
+                    fig_tone.add_vline(x=0, line_dash="dot", line_color="white",
+                                       annotation_text="Neutral")
+                    fig_tone.update_layout(height=320, margin=dict(l=20, r=20, t=50, b=30))
+                    st.plotly_chart(fig_tone, use_container_width=True)
+
+                st.divider()
+
+                # ── Top impactful articles ────────────────────────────────────
+                st.subheader(f"Top articles by SBERT Impact Score")
+                top_articles = matched_df.nlargest(10, "impact_score")
+                for i, (_, row) in enumerate(top_articles.iterrows(), 1):
+                    url  = str(row.get("DOCUMENTIDENTIFIER", "")).strip()
+                    src  = str(row.get("SOURCECOMMONNAME", "Unknown source")).strip()
+                    tone = row.get("tone_value", 0.0)
+                    si   = row.get("impact_score", 0.0)
+                    tone_icon = "😟" if tone < -1 else ("😊" if tone > 1 else "😐")
+                    with st.container():
+                        c1, c2, c3 = st.columns([5, 1, 1])
+                        with c1:
+                            if url.startswith("http"):
+                                st.markdown(f"**{i}.** [{src}]({url})")
+                            else:
+                                st.markdown(f"**{i}.** {src}")
+                        with c2:
+                            st.markdown(f"Tone: {tone_icon} `{tone:.2f}`")
+                        with c3:
+                            st.markdown(f"S_I: `{si:.3f}`")
+
+                st.divider()
+
+                # ── Top themes in matched articles ─────────────────────────────
+                st.subheader("Dominant themes in matched articles")
+                import ast as _ast2
+                from collections import Counter as _Counter
+
+                all_t = []
+                for v in matched_df["theme_list"]:
+                    try:
+                        themes = _ast2.literal_eval(v) if isinstance(v, str) else v
+                        all_t.extend(themes)
+                    except Exception:
+                        pass
+
+                if all_t:
+                    theme_freq = (
+                        pd.DataFrame(_Counter(all_t).most_common(15), columns=["Theme", "Count"])
+                    )
+                    fig_themes = px.bar(
+                        theme_freq, x="Count", y="Theme", orientation="h",
+                        title="Top GDELT themes in matched articles",
+                        template="plotly_dark",
+                        color="Count", color_continuous_scale="Blues",
+                    )
+                    fig_themes.update_layout(
+                        height=420, margin=dict(l=20, r=20, t=50, b=30),
+                        yaxis={"autorange": "reversed"},
+                    )
+                    st.plotly_chart(fig_themes, use_container_width=True)
+
+    elif not wdog_keyword.strip():
+        st.info("Enter a keyword above and click **Watch** to start monitoring.")

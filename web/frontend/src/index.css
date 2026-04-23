@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #f0f5ff;
+  color: #0f172a;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #bfdbfe; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #93c5fd; }
+
+/* ── Grid background ──────────────────────────────────────── */
+.grid-bg {
+  background-color: #f0f5ff;
+  background-image:
+    linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* ── Component classes ────────────────────────────────────── */
+@layer components {
+  .card {
+    @apply bg-white border border-blue-100 rounded-2xl shadow-sm;
+  }
+  .card-hover {
+    @apply card transition-all duration-200 hover:shadow-md hover:border-blue-300 hover:-translate-y-0.5;
+  }
+  .stat-card {
+    @apply card p-5 flex flex-col gap-1;
+  }
+  .btn-primary {
+    @apply bg-accent-blue text-white font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-blue-700 active:scale-95 transition-all duration-150 shadow-sm;
+  }
+  .btn-ghost {
+    @apply bg-white text-text-primary font-medium px-4 py-2 rounded-xl
+           hover:bg-blue-50 transition-all duration-150 border border-blue-200;
+  }
+  .input-field {
+    @apply w-full bg-white border border-blue-200 rounded-xl px-4 py-3
+           text-text-primary placeholder-text-muted outline-none shadow-sm
+           focus:border-accent-blue focus:ring-2 focus:ring-blue-100 transition-all duration-200;
+  }
+  .badge-breaking {
+    @apply inline-flex items-center gap-1.5 bg-red-50 text-accent-red
+           border border-red-200 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+  .badge-trending {
+    @apply inline-flex items-center gap-1.5 bg-amber-50 text-accent-yellow
+           border border-amber-200 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+  .badge-normal {
+    @apply inline-flex items-center gap-1.5 bg-green-50 text-accent-green
+           border border-green-200 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+  .section-label {
+    @apply text-xs font-mono text-accent-blue uppercase tracking-widest font-semibold;
+  }
+  .page-title {
+    @apply text-3xl font-extrabold text-text-primary tracking-tight;
+  }
+  .page-sub {
+    @apply text-text-muted leading-relaxed;
+  }
+}
+
+/* ── Animations ───────────────────────────────────────────── */
+.animate-slide-up { animation: slideUp 0.35s ease-out; }
+.animate-fade-in  { animation: fadeIn 0.25s ease-out; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Pulse dot */
+.pulse-dot { position: relative; }
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: ping 1.8s cubic-bezier(0,0,0.2,1) infinite;
+  opacity: 0.35;
+}
+@keyframes ping {
+  75%, 100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Recharts */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #ffffff !important;
+  border: 1px solid #dbeafe !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.1) !important;
+  color: #0f172a !important;
+}
