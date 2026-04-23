@@ -20,7 +20,7 @@ data/df_clean.pkl
 
 # Report outputs (topic modeling, spikes, etc.)
 !reports/**/*
-web/frontend/node_modules/
+**/node_modules/
 web/frontend/dist/
 data/gdelt_processed.csv
 data/gdelt_cache/
