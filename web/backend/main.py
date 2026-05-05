@@ -68,6 +68,86 @@ def _store_trend_snapshot():
     })
     if len(_snapshot_history) > _MAX_HISTORY:
         _snapshot_history.pop(0)
+    _check_and_log_alert(result)
+
+
+def _check_and_log_alert(result: dict) -> None:
+    """
+    After every snapshot, compute z-score vs the 19-year velocity baseline.
+    If z >= 1.0 (ELEVATED) or z >= 2.0 (RUPTURE), persist a rich alert to _alert_log.
+    """
+    global _alert_log
+
+    live_vs = result.get("live_vs", 0.0)
+    if live_vs <= 0:
+        return
+
+    vd = velocity_df()
+    if vd.empty:
+        return
+
+    vm  = float(vd["semantic_velocity"].mean())
+    vs  = float(vd["semantic_velocity"].std())
+    z   = (live_vs - vm) / (vs + 1e-9)
+
+    if z < 1.0:
+        return  # below elevated threshold — not worth logging
+
+    label = "RUPTURE" if z >= 2.0 else "ELEVATED"
+
+    # ── Top themes from current GDELT snapshot ─────────────────────────────
+    gd = gdelt_df()
+    top_themes: list[dict] = []
+    top_events: list[dict] = []
+
+    if not gd.empty:
+        gd_c = gd.copy()
+        gd_c["_tp"] = gd_c["theme_list"].apply(parse_themes)
+        tc = Counter(t for tp in gd_c["_tp"] for t in tp)
+        top_themes = [{"theme": t, "count": c} for t, c in tc.most_common(8)]
+
+        if "tone_value" in gd_c.columns:
+            gd_c["_tone_abs"] = pd.to_numeric(gd_c["tone_value"], errors="coerce").fillna(0).abs()
+            for _, row in gd_c.nlargest(5, "_tone_abs").iterrows():
+                themes = row["_tp"][:4] if isinstance(row["_tp"], list) else []
+                top_events.append({
+                    "source": str(row.get("SOURCECOMMONNAME", "")),
+                    "url":    str(row.get("DOCUMENTIDENTIFIER", "")),
+                    "tone":   round(float(row.get("tone_value", 0) or 0), 2),
+                    "themes": themes,
+                })
+
+    # ── Clusters that shifted the most vs previous snapshot ────────────────
+    _, cluster_labels, _ = get_cluster_centroids()
+    rising_clusters: list[dict] = []
+    if len(_snapshot_history) >= 2:
+        curr_dist = _snapshot_history[-1]["cluster_dist"]
+        prev_dist = _snapshot_history[-2]["cluster_dist"]
+        for lbl in cluster_labels:
+            delta = curr_dist.get(lbl, 0.0) - prev_dist.get(lbl, 0.0)
+            if delta > 0.02:
+                rising_clusters.append({"cluster": lbl, "delta": round(delta * 100, 2)})
+        rising_clusters.sort(key=lambda x: x["delta"], reverse=True)
+
+    alert = {
+        "id":              f"{result['timestamp']}_{len(_alert_log)}",
+        "detected_at":     datetime.now(timezone.utc).isoformat(),
+        "gdelt_timestamp": result["timestamp"],
+        "live_vs":         live_vs,
+        "z_score":         round(z, 3),
+        "rupture_label":   label,
+        "top_themes":      top_themes,
+        "top_events":      top_events,
+        "rising_clusters": rising_clusters[:4],
+        "snapshot_count":  len(_snapshot_history),
+    }
+
+    _alert_log.append(alert)
+    if len(_alert_log) > _MAX_ALERTS:
+        _alert_log.pop(0)
+
+    print(f"[ALERT] {label} — V_s={live_vs:.4f}, z={z:.2f}σ, "
+          f"top theme: {top_themes[0]['theme'] if top_themes else 'N/A'}")
 
 
 def _auto_refresh_loop():
@@ -104,6 +184,10 @@ _cluster_meta: dict[str, dict] = {}
 # Each entry: {timestamp, centroid (np.ndarray), cluster_dist (dict), theme_counts (dict)}
 _snapshot_history: list[dict] = []
 _MAX_HISTORY = 12  # keep last 12 snapshots (~3 hours at 15-min cadence)
+
+# Persistent alert log — ruptures detected automatically by background thread
+_alert_log: list[dict] = []
+_MAX_ALERTS = 50
 
 
 def get_sbert():
@@ -685,6 +769,130 @@ def watchdog(req: WatchdogRequest):
         "time_series": time_series,
         "model_insight": model_insight,
     }
+
+
+# ── Live Alerts ───────────────────────────────────────────────────────────────
+
+@app.get("/api/alerts")
+def get_alerts(limit: int = 20):
+    """
+    Returns auto-detected rupture/elevated alerts in reverse-chronological order.
+    Alerts are generated every time _store_trend_snapshot() fires (every 15 min)
+    and the live semantic velocity z-score exceeds 1.0 vs the 19-year baseline.
+    """
+    return list(reversed(_alert_log))[:limit]
+
+
+@app.get("/api/alerts/latest")
+def get_latest_alert():
+    """Returns the single most recent alert, or null if none detected yet."""
+    if not _alert_log:
+        return None
+    return _alert_log[-1]
+
+
+# ── Validation Proof ─────────────────────────────────────────────────────────
+
+@app.get("/api/validation/proof")
+def validation_proof():
+    """
+    Returns rupture weeks mapped to known real-world events.
+    Computed by src/build_validation_proof.py.
+    """
+    p = ROOT / "reports" / "validation_proof.csv"
+    df = _load(p)
+    if df.empty:
+        return {"rows": [], "precision": {}, "summary": "Run src/build_validation_proof.py"}
+    rows = df.to_dict("records")
+
+    # Precision@K from the rows
+    hits = [1 if str(r.get("matched_event", "—")).strip() != "—" else 0 for r in rows]
+    precision = {}
+    for k in [5, 10, 15, 20, 30]:
+        if len(hits) >= k:
+            precision[f"p{k}"] = round(sum(hits[:k]) / k, 2)
+
+    # Stats
+    vel_path = ROOT / "reports" / "deep_learning" / "semantic_velocity.csv"
+    vdf = _load(vel_path)
+    stats = {}
+    if not vdf.empty:
+        vdf.columns = ["week", "velocity"]
+        vdf["velocity"] = pd.to_numeric(vdf["velocity"], errors="coerce")
+        m = float(vdf["velocity"].mean())
+        s = float(vdf["velocity"].std())
+        stats = {
+            "mean": round(m, 4),
+            "std":  round(s, 4),
+            "threshold_1s": round(m + s, 4),
+            "threshold_2s": round(m + 2 * s, 4),
+            "total_weeks":  len(vdf),
+        }
+
+    diag_p = ROOT / "reports" / "validation_proof.txt"
+    diag = diag_p.read_text() if diag_p.exists() else ""
+
+    return {"rows": rows, "precision": precision, "stats": stats, "diagnostic": diag}
+
+
+# ── Hybrid Pipeline ───────────────────────────────────────────────────────────
+
+@app.get("/api/hybrid/summary")
+def hybrid_summary():
+    p = ROOT / "reports" / "hybrid" / "hybrid_cluster_summary.csv"
+    df = _load(p)
+    if df.empty:
+        return []
+    return df.to_dict("records")
+
+
+@app.get("/api/hybrid/impact")
+def hybrid_impact(limit: int = 20):
+    p = ROOT / "reports" / "hybrid" / "hybrid_impact_scores.csv"
+    df = _load(p)
+    if df.empty:
+        return []
+    if "si_hybrid" in df.columns:
+        df = df.sort_values("si_hybrid", ascending=False)
+    return df.head(limit).to_dict("records")
+
+
+@app.get("/api/hybrid/alpha")
+def hybrid_alpha():
+    p = ROOT / "reports" / "hybrid" / "alpha_optimisation.txt"
+    if not p.exists():
+        return {"alpha": None, "text": "Run src/hybrid_pipeline.py to generate results."}
+    return {"alpha": None, "text": p.read_text()}
+
+
+# ── Ablation Study ────────────────────────────────────────────────────────────
+
+@app.get("/api/ablation/table")
+def ablation_table():
+    p = ROOT / "reports" / "ablation" / "ablation_table.csv"
+    df = _load(p)
+    if df.empty:
+        return []
+    return df.to_dict("records")
+
+
+@app.get("/api/ablation/diagnostic")
+def ablation_diagnostic():
+    p = ROOT / "reports" / "ablation" / "ablation_diagnostic.txt"
+    if not p.exists():
+        return {"text": "Run src/ablation_study.py to generate the diagnostic report."}
+    return {"text": p.read_text()}
+
+
+# ── Architecture Diagram ──────────────────────────────────────────────────────
+
+@app.get("/api/architecture/diagram")
+def architecture_diagram():
+    from fastapi.responses import FileResponse
+    p = ROOT / "reports" / "architecture_diagram.png"
+    if not p.exists():
+        raise HTTPException(404, "Architecture diagram not found. Run src/generate_architecture_diagram.py")
+    return FileResponse(str(p), media_type="image/png")
 
 
 if __name__ == "__main__":

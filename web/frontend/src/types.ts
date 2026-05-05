@@ -102,3 +102,84 @@ export interface SpikeEvent {
   velocity_z: number
   keywords: string
 }
+
+export interface LiveAlertTheme {
+  theme: string
+  count: number
+}
+
+export interface LiveAlertEvent {
+  source: string
+  url: string
+  tone: number
+  themes: string[]
+}
+
+export interface LiveAlertCluster {
+  cluster: string
+  delta: number
+}
+
+export interface LiveAlert {
+  id: string
+  detected_at: string
+  gdelt_timestamp: string
+  live_vs: number
+  z_score: number
+  rupture_label: 'RUPTURE' | 'ELEVATED'
+  top_themes: LiveAlertTheme[]
+  top_events: LiveAlertEvent[]
+  rising_clusters: LiveAlertCluster[]
+  snapshot_count: number
+}
+
+export interface HybridClusterRow {
+  cluster: string
+  size: number
+  silhouette_seeded: number
+  silhouette_random: number
+  top_terms: string
+  low_confidence_pct?: number
+}
+
+export interface HybridImpactRow {
+  source?: string
+  url?: string
+  tone?: number
+  sbert_uniqueness?: number
+  lda_rarity?: number
+  si_hybrid?: number
+  [key: string]: unknown
+}
+
+export interface AblationRow {
+  Model: string
+  Precision: number
+  Recall: number
+  F1: number
+  Mean_Lead_Days: number
+  TP?: number
+  FP?: number
+  FN?: number
+}
+
+export interface ValidationRow {
+  rank: number
+  week: string
+  velocity: number
+  z_score: number
+  matched_event: string
+}
+
+export interface ValidationProof {
+  rows: ValidationRow[]
+  precision: Record<string, number>
+  stats: {
+    mean: number
+    std: number
+    threshold_1s: number
+    threshold_2s: number
+    total_weeks: number
+  }
+  diagnostic: string
+}

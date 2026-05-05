@@ -1,0 +1,62 @@
+version: "3.9"
+
+# Shared volume definitions — data and reports persist across service restarts
+volumes:
+  data:
+  reports:
+  models:
+
+services:
+
+  # ── Full ML/DL pipeline (one-shot) ─────────────────────────────────────────
+  pipeline:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./models:/app/models
+    command: python run_all.py
+    profiles: [pipeline]
+
+  # ── Streamlit interactive dashboard ────────────────────────────────────────
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: >
+      streamlit run dashboard.py
+        --server.address 0.0.0.0
+        --server.port 8501
+        --server.headless true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── FastAPI backend (React web platform) ───────────────────────────────────
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./models:/app/models
+    command: python web/backend/main.py
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── GDELT live refresh (run manually or schedule with cron) ────────────────
+  gdelt-refresh:
+    build: .
+    volumes:
+      - ./data:/app/data
+    command: python -c "from src.gdelt_fetcher import fetch_last_n_gkg; fetch_last_n_gkg(n=16)"
+    profiles: [refresh]

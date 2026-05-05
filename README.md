@@ -338,7 +338,32 @@ dynamic-trend-event-detector/
 
 ## 8. How to Run
 
-### One-time setup
+### Option 0 — Docker (Turn-Key, recommended for reproducibility)
+
+```bash
+# Build once
+docker compose build
+
+# Run full ML/DL pipeline
+docker compose run pipeline
+
+# Start Streamlit dashboard   → http://localhost:8501
+docker compose up dashboard
+
+# Start FastAPI + React API  → http://localhost:8000
+docker compose up api
+
+# Refresh live GDELT data (last 4 hours)
+docker compose run gdelt-refresh
+```
+
+> No Python installation required. All dependencies, spaCy models, and environment setup
+> are handled inside the container. `data/` and `reports/` are bind-mounted so outputs
+> persist on your host machine.
+
+---
+
+### One-time setup (without Docker)
 
 ```bash
 cd dynamic-trend-event-detector
@@ -392,6 +417,45 @@ Outputs land under `reports/topic_modeling/11_lda_sbert/` (coherence sweep plot,
 **Spike events:** after `topics_over_time.csv` exists, run  
 `python src/spike_events_from_topics_over_time.py`  
 to write `reports/topic_modeling/12_spikes_anchors/spike_events.csv` (per-topic **z-score on growth-velocity** > 2.5 + keywords). Run **notebook 12** after notebook 11 (or this CLI alone if `topics_over_time.csv` already exists under `11_lda_sbert/`).
+
+### Option E — Hybrid Pipeline (LDA-Seeded SBERT + Learned α)
+
+```bash
+source venv/bin/activate
+python src/hybrid_pipeline.py
+```
+
+Runs the synergistic hybrid:
+1. Encodes LDA topic words with SBERT → seeds for K-Means (Stage 1 — Forward)
+2. Computes per-document SBERT confidence → feeds back as LDA weight (Stage 2 — Feedback)
+3. Optimises fusion weight α via MRR on anchor ground-truth events (Stage 3 — Fusion)
+
+Outputs: `reports/hybrid/` — cluster summary, impact scores, α report, comparison chart.
+
+### Option F — Ablation Study
+
+```bash
+source venv/bin/activate
+python src/ablation_study.py
+```
+
+Evaluates TF-IDF, LDA, SBERT, and Hybrid on the same 3 anchor events with consistent
+Precision / Recall / F1 / Lead-time metrics. Generates:
+- `reports/ablation/ablation_table.csv`
+- `reports/ablation/ablation_table.png`
+- `reports/ablation/ablation_diagnostic.txt`
+
+### Option G — Architecture Diagram
+
+```bash
+source venv/bin/activate
+python src/generate_architecture_diagram.py
+```
+
+Generates `reports/architecture_diagram.png` (300 DPI) and `reports/architecture_diagram.pdf`
+(vector). Shows tensor shapes, the feedback loop, and the fusion mechanism.
+
+---
 
 ### GDELT BigQuery spike validation (optional)
 

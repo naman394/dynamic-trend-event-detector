@@ -1,15 +1,19 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Activity, Radio, Layers, Zap, Rss, BarChart2, Github, Brain, RefreshCw } from 'lucide-react'
+import { Activity, Radio, Layers, Zap, Rss, BarChart2, Github, Brain, RefreshCw, GitMerge, FlaskConical, Network, ShieldCheck } from 'lucide-react'
 
 const nav = [
-  { to: '/',         icon: Activity,  label: 'Dashboard'     },
-  { to: '/trends',   icon: Brain,     label: 'Trend Radar',  badge: 'LIVE' },
-  { to: '/watchdog', icon: Radio,     label: 'Watchdog'      },
-  { to: '/ruptures', icon: Zap,       label: 'Ruptures'      },
-  { to: '/clusters', icon: Layers,    label: 'Clusters'      },
-  { to: '/feed',     icon: Rss,       label: 'Live Feed'     },
-  { to: '/impact',   icon: BarChart2, label: 'Impact'        },
+  { to: '/',             icon: Activity,      label: 'Dashboard',     group: 'main' },
+  { to: '/trends',       icon: Brain,         label: 'Trend Radar',   group: 'main', badge: 'LIVE' },
+  { to: '/watchdog',     icon: Radio,         label: 'Watchdog',      group: 'main' },
+  { to: '/ruptures',     icon: Zap,           label: 'Ruptures',      group: 'main' },
+  { to: '/clusters',     icon: Layers,        label: 'Clusters',      group: 'main' },
+  { to: '/feed',         icon: Rss,           label: 'Live Feed',     group: 'main' },
+  { to: '/impact',       icon: BarChart2,     label: 'Impact',        group: 'main' },
+  { to: '/hybrid',       icon: GitMerge,      label: 'Hybrid Model',  group: 'research' },
+  { to: '/ablation',     icon: FlaskConical,  label: 'Ablation Study',group: 'research' },
+  { to: '/validation',   icon: ShieldCheck,   label: 'Validation',    group: 'research', badge: 'P@5=100%' },
+  { to: '/architecture', icon: Network,       label: 'Architecture',  group: 'research' },
 ]
 
 function useFreshness() {
@@ -63,9 +67,9 @@ export default function Layout() {
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 px-3 py-4 space-y-0.5 overflow-y-auto">
-          <p className="px-3 pt-1 pb-2 text-[10px] font-semibold text-slate-500 uppercase tracking-widest">Navigation</p>
-          {nav.map(({ to, icon: Icon, label, badge }) => (
+        <nav className="flex-1 px-3 py-4 overflow-y-auto space-y-0.5">
+          <p className="px-3 pt-1 pb-2 text-[10px] font-semibold text-slate-500 uppercase tracking-widest">Intelligence</p>
+          {nav.filter(n => n.group === 'main').map(({ to, icon: Icon, label, badge }) => (
             <NavLink
               key={to}
               to={to}
@@ -85,6 +89,23 @@ export default function Layout() {
                   {badge}
                 </span>
               )}
+            </NavLink>
+          ))}
+          <p className="px-3 pt-4 pb-2 text-[10px] font-semibold text-slate-500 uppercase tracking-widest">Research</p>
+          {nav.filter(n => n.group === 'research').map(({ to, icon: Icon, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
+                  isActive
+                    ? 'bg-indigo-600 text-white shadow-sm'
+                    : 'text-slate-500 hover:text-slate-900 hover:bg-indigo-50'
+                }`
+              }
+            >
+              <Icon size={15} />
+              <span className="flex-1">{label}</span>
             </NavLink>
           ))}
         </nav>

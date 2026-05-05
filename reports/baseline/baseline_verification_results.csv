@@ -1,4 +1,4 @@
-date,headlines,top_term,tfidf_intensity
+aedate,headlines,top_term,tfidf_intensity
 2003-02-19,198,funds,3.248
 2003-02-20,250,war,4.6443
 2003-02-21,250,rain,5.7105

@@ -1,0 +1,24 @@
+HYBRID FUSION REPORT — α OPTIMISATION
+=======================================================
+α* (learned)         : 0.5836
+Interpretation       : Balanced
+SBERT-only mean S_I  : 1.0010
+Hybrid mean S_I      : 1.4014
+Silhouette (seeded)  : 0.0261
+Silhouette (random)  : 0.0251
+Silhouette Δ         : +0.0010 (seeded better)
+=======================================================
+
+SYNERGY EXPLANATION
+-------------------------------------------------------
+Stage 1 (LDA→SBERT): LDA topic words encoded as SBERT centroids
+  seed K-Means, replacing random init. LDA's co-occurrence
+  structure grounds the geometric clustering.
+
+Stage 2 (SBERT→LDA): Per-document SBERT confidence flags
+  25.0% of ambiguous docs for higher LDA weight.
+  Bidirectional dependency: each model fills the other's blind spot.
+
+Stage 3 (Fusion): α* learned via MRR maximisation on real anchor
+  events (Black Summer, COVID, Lockdown). The optimal α proves
+  empirically which signal matters more for real event detection.

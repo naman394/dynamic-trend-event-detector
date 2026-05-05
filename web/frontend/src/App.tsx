@@ -7,6 +7,10 @@ import Clusters from './pages/Clusters'
 import LiveFeed from './pages/LiveFeed'
 import Impact from './pages/Impact'
 import Trends from './pages/Trends'
+import Hybrid from './pages/Hybrid'
+import Ablation from './pages/Ablation'
+import Architecture from './pages/Architecture'
+import Validation from './pages/Validation'
 
 export default function App() {
   return (
@@ -20,6 +24,10 @@ export default function App() {
           <Route path="clusters" element={<Clusters />} />
           <Route path="feed" element={<LiveFeed />} />
           <Route path="impact" element={<Impact />} />
+          <Route path="hybrid" element={<Hybrid />} />
+          <Route path="ablation" element={<Ablation />} />
+          <Route path="architecture" element={<Architecture />} />
+          <Route path="validation" element={<Validation />} />
         </Route>
       </Routes>
     </BrowserRouter>

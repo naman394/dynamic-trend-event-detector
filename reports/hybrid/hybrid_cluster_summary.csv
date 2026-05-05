@@ -1,0 +1,11 @@
+Cluster,Label,Size,TopTerms,AvgConf
+0,Topic A,495,"water, drought, rain, farmers, restrictions, water restrictions",0.4714
+1,Topic B,1090,"market, industry, business, boost, price, budget",0.3498
+2,Topic C,575,"police, probe, security, police probe, drug, crime",0.4439
+3,Topic D,1970,"win, cup, world, wins, final, world cup",0.3882
+4,Topic E,1268,"new, missing, search, day, coast, anzac",0.2939
+5,Topic F,735,"iraq, iraqi, baghdad, saddam, war, troops",0.5534
+6,Topic G,704,"man, court, murder, charged, trial, charges",0.4096
+7,Topic H,716,"death, killed, crash, dies, dead, accident",0.4166
+8,Topic I,1436,"govt, council, nsw, health, plan, urged",0.3728
+9,Topic J,1011,"sars, war, korea, anti, peace, talks",0.3962

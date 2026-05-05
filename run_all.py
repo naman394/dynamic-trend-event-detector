@@ -6,6 +6,9 @@ Master orchestrator — full pipeline execution order:
               → GDELT Analysis
                     → Event Impact Scoring (SBERT, uses DL rupture weeks)
                           → Visualise Results
+                                → Hybrid Pipeline (LDA-seeded K-Means + learned α fusion)
+                                      → Ablation Study (P/R/F1/Lead-time on anchor events)
+                                            → Architecture Diagram (publication-ready)
 
 GDELT live feed: gdelt_processor.py calls gdelt_fetcher.py which downloads the
 most recent GKG snapshot from http://data.gdeltproject.org/gdeltv2/lastupdate.txt
@@ -33,11 +36,15 @@ SCRIPTS = [
     'src/eda.py',
     'src/baseline.py',
     'src/advanced_ml.py',
-    'src/deep_learning.py',       # SBERT K-Means → rupture weeks
-    'src/gdelt_processor.py',     # parse raw GDELT
-    'src/gdelt_analysis.py',      # theme/tone summary
-    'src/event_impact_scoring.py',# SBERT S_I using DL rupture output
+    'src/deep_learning.py',            # SBERT K-Means → rupture weeks
+    'src/gdelt_processor.py',          # parse raw GDELT
+    'src/gdelt_analysis.py',           # theme/tone summary
+    'src/event_impact_scoring.py',     # SBERT S_I using DL rupture output
     'src/visualize_results.py',
+    'src/hybrid_pipeline.py',          # LDA-seeded K-Means + learned α fusion
+    'src/ablation_study.py',           # P/R/F1/Lead-time ablation on anchor events
+    'src/build_validation_proof.py',   # Precision@K proof vs 12 verified real events
+    'src/generate_architecture_diagram.py',  # publication-ready architecture diagram
 ]
 
 if __name__ == "__main__":

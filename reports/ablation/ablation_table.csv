@@ -1,0 +1,5 @@
+Model,N_Anchors,TP,FP,FN,Precision,Recall,F1,Mean_Lead_Days,Total_Alerts
+TF-IDF Only,12,1,43,11,0.023,0.083,0.036,0.0,52
+LDA Only,4,4,360,0,0.011,1.0,0.022,-1.2,509
+SBERT Only,12,9,84,3,0.097,0.75,0.171,-13.1,101
+Hybrid Full,4,3,95,1,0.031,0.75,0.059,-14.3,101
