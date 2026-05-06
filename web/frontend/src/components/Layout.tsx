@@ -1,10 +1,11 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Activity, Layers, Zap, Rss, Github, Brain, RefreshCw, FlaskConical, Network, ShieldCheck } from 'lucide-react'
+import { Activity, Radio, Layers, Zap, Rss, Github, Brain, RefreshCw, FlaskConical, Network, ShieldCheck } from 'lucide-react'
 
 const nav = [
   { to: '/',             icon: Activity,      label: 'Dashboard',     group: 'main' },
   { to: '/trends',       icon: Brain,         label: 'Trend Radar',   group: 'main', badge: 'LIVE' },
+  { to: '/watchdog',     icon: Radio,         label: 'Watchdog',      group: 'main' },
   { to: '/ruptures',     icon: Zap,           label: 'Ruptures',      group: 'main' },
   { to: '/clusters',     icon: Layers,        label: 'Clusters',      group: 'main' },
   { to: '/feed',         icon: Rss,           label: 'Live Feed',     group: 'main' },
