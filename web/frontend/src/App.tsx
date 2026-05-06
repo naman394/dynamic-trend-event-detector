@@ -4,7 +4,6 @@ import Dashboard from './pages/Dashboard'
 import Ruptures from './pages/Ruptures'
 import Clusters from './pages/Clusters'
 import LiveFeed from './pages/LiveFeed'
-import Impact from './pages/Impact'
 import Trends from './pages/Trends'
 import Ablation from './pages/Ablation'
 import Architecture from './pages/Architecture'
@@ -20,7 +19,6 @@ export default function App() {
           <Route path="ruptures" element={<Ruptures />} />
           <Route path="clusters" element={<Clusters />} />
           <Route path="feed" element={<LiveFeed />} />
-          <Route path="impact" element={<Impact />} />
           <Route path="ablation" element={<Ablation />} />
           <Route path="architecture" element={<Architecture />} />
           <Route path="validation" element={<Validation />} />

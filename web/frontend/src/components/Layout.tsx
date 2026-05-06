@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Activity, Layers, Zap, Rss, BarChart2, Github, Brain, RefreshCw, FlaskConical, Network, ShieldCheck } from 'lucide-react'
+import { Activity, Layers, Zap, Rss, Github, Brain, RefreshCw, FlaskConical, Network, ShieldCheck } from 'lucide-react'
 
 const nav = [
   { to: '/',             icon: Activity,      label: 'Dashboard',     group: 'main' },
@@ -8,7 +8,6 @@ const nav = [
   { to: '/ruptures',     icon: Zap,           label: 'Ruptures',      group: 'main' },
   { to: '/clusters',     icon: Layers,        label: 'Clusters',      group: 'main' },
   { to: '/feed',         icon: Rss,           label: 'Live Feed',     group: 'main' },
-  { to: '/impact',       icon: BarChart2,     label: 'Impact',        group: 'main' },
   { to: '/ablation',     icon: FlaskConical,  label: 'Ablation Study',group: 'research' },
   { to: '/validation',   icon: ShieldCheck,   label: 'Validation',    group: 'research', badge: 'P@5=100%' },
   { to: '/architecture', icon: Network,       label: 'Architecture',  group: 'research' },
