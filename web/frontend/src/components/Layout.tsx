@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Activity, Radio, Layers, Zap, Rss, BarChart2, Github, Brain, RefreshCw, GitMerge, FlaskConical, Network, ShieldCheck } from 'lucide-react'
+import { Activity, Radio, Layers, Zap, Rss, BarChart2, Github, Brain, RefreshCw, FlaskConical, Network, ShieldCheck } from 'lucide-react'
 
 const nav = [
   { to: '/',             icon: Activity,      label: 'Dashboard',     group: 'main' },
@@ -10,7 +10,6 @@ const nav = [
   { to: '/clusters',     icon: Layers,        label: 'Clusters',      group: 'main' },
   { to: '/feed',         icon: Rss,           label: 'Live Feed',     group: 'main' },
   { to: '/impact',       icon: BarChart2,     label: 'Impact',        group: 'main' },
-  { to: '/hybrid',       icon: GitMerge,      label: 'Hybrid Model',  group: 'research' },
   { to: '/ablation',     icon: FlaskConical,  label: 'Ablation Study',group: 'research' },
   { to: '/validation',   icon: ShieldCheck,   label: 'Validation',    group: 'research', badge: 'P@5=100%' },
   { to: '/architecture', icon: Network,       label: 'Architecture',  group: 'research' },
